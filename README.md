@@ -1,3 +1,3 @@
-# SUSU LATAM Landing v1
+SUSU LATAM bilingual landing v2
 
-Subir todos estos archivos al root del repo.
+Upload all files/folders to repository root.
