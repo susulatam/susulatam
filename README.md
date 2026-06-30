@@ -1,1 +1,1 @@
-SUSU LATAM v7 - Community First. Ready for GitHub Pages.
+SUSU LATAM v8 - updated with Latin America sustainability artwork.
