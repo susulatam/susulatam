@@ -1,17 +1,17 @@
-/* SUSU LATAM v11 EVENTS FIXED */
+/* SUSU LATAM v12 - clean header */
 :root{--navy:#0F172A;--white:#FFFFFF;--green:#22C55E;--gray:#E5E7EB;--muted:#94A3B8}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--navy);color:var(--white)}
 a{text-decoration:none;color:inherit}
-.nav{width:min(1120px,92%);margin:0 auto;padding:28px 0;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav{width:min(1120px,92%);margin:0 auto;padding:28px 0 22px;display:flex;align-items:flex-start;justify-content:space-between;gap:28px}
 .logo-mark{line-height:.9;font-weight:900;letter-spacing:.03em;color:#fff}
 .logo-mark span{display:block;font-size:38px}
 .logo-mark small{display:block;font-size:17px;margin-top:10px;letter-spacing:.24em}
 .logo-mark.footer span{font-size:26px}.logo-mark.footer small{font-size:12px}
-.nav-right{display:flex;align-items:center;gap:18px}
-.nav-event,.back-link{font-size:15px;color:var(--gray);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:10px 15px}
-.nav-event:hover,.back-link:hover{color:var(--green);border-color:var(--green)}
+.nav-right{display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+.nav-word{font-weight:900;text-transform:uppercase;letter-spacing:.24em;color:var(--white);font-size:16px;line-height:1}
+.nav-word:hover{color:var(--green)}
 .lang{display:flex;gap:12px;align-items:center}
 .lang a{display:inline-flex;width:34px;height:34px;border-radius:999px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);opacity:.75}
 .lang a:hover,.lang a.active{opacity:1;border-color:var(--green)}
@@ -62,5 +62,6 @@ footer p{max-width:420px}footer a{color:var(--gray)}footer a:hover{color:var(--g
   .manifesto{padding:34px}
   footer{flex-direction:column;align-items:flex-start}
   .nav{align-items:flex-start}
-  .nav-right{flex-direction:column;align-items:flex-end;gap:12px}
+  .nav-right{align-items:flex-end;gap:12px}
+  .nav-word{font-size:14px;letter-spacing:.2em}
 }
