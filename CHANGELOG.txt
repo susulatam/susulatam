@@ -1,0 +1,14 @@
+SUSU LATAM v14
+- Evento actualizado en ES, EN y PT.
+- Fecha: 16/09/2026.
+- Horario: 9:00 a 11:30.
+- Formato: desayuno presencial.
+- Ubicación: Tigre, Buenos Aires.
+- Eliminadas todas las referencias a +54 Lab y Parque de la Innovación.
+
+---
+SUSU LATAM v15
+- Fecha actualizada: 2 de septiembre de 2026 (antes 16/09).
+- Horario actualizado: 9:00 a 12:00 (antes 9:00 a 11:30).
+- Duración del texto descriptivo ajustada a "tres horas".
+- Actualizado en ES, EN y PT (home + Eventos).
