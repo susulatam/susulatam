@@ -12,3 +12,15 @@ SUSU LATAM v15
 - Horario actualizado: 9:00 a 12:00 (antes 9:00 a 11:30).
 - Duración del texto descriptivo ajustada a "tres horas".
 - Actualizado en ES, EN y PT (home + Eventos).
+
+---
+SUSU LATAM v16
+- Home de ES/EN/PT reemplazado por landing minimalista: hero + un párrafo de "¿Qué es SUSU?" + CTA de contacto (mailto:info@susulatam.com). Sin nombre propio.
+- Se quitó el link "Eventos" del nav y de la home (a pedido, para esta etapa).
+- Las páginas completas de evento (/es/eventos/, /en/events/, /pt/eventos/) NO se tocaron y siguen 100% funcionales para compartir por link directo.
+- Todo el contenido anterior (Formatos, Conectar/Aprender/Construir, teaser de evento, manifiesto) quedó comentado dentro de cada index.html, listo para descomentar cuando se quiera hacer crecer la web.
+
+---
+SUSU LATAM v17
+- Los botones de contacto de la landing (hero + sección "¿Qué es SUSU?") ahora apuntan al Google Form existente (forms.gle/YQpwiHDhgTH37HHL8), el mismo que ya usaba la waitlist del evento.
+- El email del footer (mailto:info@susulatam.com) se dejó como está, como canal alternativo.
