@@ -24,3 +24,10 @@ SUSU LATAM v16
 SUSU LATAM v17
 - Los botones de contacto de la landing (hero + sección "¿Qué es SUSU?") ahora apuntan al Google Form existente (forms.gle/YQpwiHDhgTH37HHL8), el mismo que ya usaba la waitlist del evento.
 - El email del footer (mailto:info@susulatam.com) se dejó como está, como canal alternativo.
+
+---
+SUSU LATAM v18
+- Nuevo menú desplegable ("Menú ▾") en el header de todas las páginas (home, eventos, sponsors), en los 3 idiomas.
+- Nueva sección "Eventos" (grilla lista para crecer): por ahora solo muestra "Buenos Aires · Septiembre 2026 · Próximamente" (sin fecha/horario exactos, por privacidad del encuentro curado). El botón lleva al Google Form de la waitlist.
+- Nueva página "Sumate como sponsor" (ES) / "Become a sponsor" (EN) / "Seja um patrocinador" (PT): pitch corto + 5 formas de colaborar + botón que abre un email pre-completado a info@susulatam.com.
+- Las páginas de evento detalladas anteriores (con fecha/horario/dirección) fueron reemplazadas por la versión "Próximamente" en las 3 versiones de idioma.
