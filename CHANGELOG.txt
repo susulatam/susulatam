@@ -31,3 +31,16 @@ SUSU LATAM v18
 - Nueva sección "Eventos" (grilla lista para crecer): por ahora solo muestra "Buenos Aires · Septiembre 2026 · Próximamente" (sin fecha/horario exactos, por privacidad del encuentro curado). El botón lleva al Google Form de la waitlist.
 - Nueva página "Sumate como sponsor" (ES) / "Become a sponsor" (EN) / "Seja um patrocinador" (PT): pitch corto + 5 formas de colaborar + botón que abre un email pre-completado a info@susulatam.com.
 - Las páginas de evento detalladas anteriores (con fecha/horario/dirección) fueron reemplazadas por la versión "Próximamente" en las 3 versiones de idioma.
+
+---
+SUSU LATAM v19
+- Agregado el badge de Website Carbon (websitecarbon.com) en el footer de las 9 páginas (home, eventos, sponsors × ES/EN/PT), en tema oscuro y recoloreado en verde de marca.
+- susulatam.com obtuvo calificación A+ (<0.01g CO2 por visita, corriendo en energía sostenible) al momento de este cambio.
+- Texto de acompañamiento traducido en los 3 idiomas.
+
+---
+SUSU LATAM v20
+- Nueva página "SUSU Impact" (ES/EN/PT) agregada al menú desplegable, tercera opción después de Eventos y Sumate como sponsor.
+- Contenido: explica el compromiso (compensar la huella de cada encuentro, financiado por SUSU LATAM), por qué (evitar greenwashing, compromiso chico y real), y una tarjeta de estado "Resultado próximamente" para SUSU Conversations #1 — sin inventar cifras ni organización todavía, ya que aún no está decidido cómo se va a compensar.
+- Incluye un CTA soft invitando a que cualquiera sugiera una forma de compensar huella en LATAM (mailto a info@susulatam.com), útil mientras se define el mecanismo.
+- Misma estructura de footer con el badge de Website Carbon que el resto del sitio.
