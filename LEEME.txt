@@ -1,0 +1,71 @@
+SUSU LATAM — Actualización de la web
+====================================
+
+QUÉ CONTIENE ESTE ZIP
+Solo los archivos que cambian. Tu style.css NO se toca, así que el diseño
+queda exactamente igual.
+
+  es/eventos/index.html      (reemplaza el existente)
+  en/events/index.html       (reemplaza el existente)
+  pt/eventos/index.html      (reemplaza el existente)
+  es/empresas/index.html     (NUEVO — página oculta)
+
+CÓMO SUBIRLO A GITHUB
+1. Descomprimí el zip.
+2. Copiá las carpetas es/ en/ pt/ sobre las de tu repo, pisando los archivos
+   que ya existen. La carpeta es/empresas/ se agrega nueva.
+3. Commit + push a la rama de siempre (main).
+
+QUÉ CAMBIÓ EN EVENTOS
+- SUSU Conversations #1: ahora con detalles — Tigre, Buenos Aires, 2 de
+  septiembre de 2026, alrededor de 15 personas, y el propósito del encuentro
+  (comunidad, red, networking, colaboraciones concretas).
+- SUSU Conversations #2: nueva tarjeta — Buenos Aires, noviembre de 2026,
+  fecha a confirmar.
+- Ambas en los 3 idiomas, con el mismo formato de tarjeta de siempre.
+- No se publica la dirección exacta ni el nombre del lugar, porque es una
+  residencia privada. Si querés que aparezca, avisame.
+
+LA PÁGINA OCULTA DE EMPRESAS
+Queda en:  susulatam.com/es/empresas/
+
+- No está enlazada desde ningún menú ni desde ninguna página: solo llegás
+  escribiendo la URL.
+- Lleva la etiqueta noindex/nofollow, así Google no la indexa.
+- Arriba tiene una franja verde que dice "Borrador interno" para que no se
+  confunda con una página publicada. Cuando la quieras publicar, se borra
+  esa franja, se borra la línea del <meta name="robots">, y se agrega el
+  link en el menú.
+
+IMPORTANTE: "oculta" no es lo mismo que "privada". Cualquiera que tenga la
+URL puede verla. En un sitio estático de GitHub Pages no hay forma de poner
+contraseña. No pongas ahí nada que no puedas mostrar si se filtra.
+
+Nota: a propósito NO la agregué al robots.txt. Ese archivo es público, así
+que listar la carpeta ahí sería justamente la forma más fácil de que alguien
+descubra la URL.
+
+CÓMO PONER LOS LOGOS
+Los recuadros están listos, cada uno con el nombre de la empresa como
+referencia. Para poner un logo:
+
+1. Guardá el archivo del logo en:  assets/logos/nombre-empresa.svg
+   (o .png con fondo transparente)
+
+2. En es/empresas/index.html, reemplazá esta línea:
+
+     <div class="logo-slot"><span>BASF</span></div>
+
+   por esta:
+
+     <div class="logo-slot"><img src="../../assets/logos/basf.svg" alt="BASF"></div>
+
+3. Listo. La hoja de estilos ya los convierte automáticamente a blanco
+   (filter: brightness(0) invert(1)), así que funcionan sobre el fondo azul
+   aunque el logo original venga en color.
+
+Los logos tenés que conseguirlos vos: son marcas registradas de cada empresa
+y no puedo reproducirlos. Casi todas tienen un "brand kit" o una sección de
+prensa en su web. Lo ideal igual es pedírselos al contacto de cada empresa,
+porque suelen tener normas de uso de marca y así además queda avisado que
+van a aparecer.
