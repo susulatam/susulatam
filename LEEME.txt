@@ -1,71 +1,42 @@
-SUSU LATAM — Actualización de la web
-====================================
+SUSU LATAM — Portada nueva (selector de idioma)
+===============================================
 
-QUÉ CONTIENE ESTE ZIP
-Solo los archivos que cambian. Tu style.css NO se toca, así que el diseño
-queda exactamente igual.
+ARCHIVOS
+  index.html              reemplaza el de la raíz del repo
+  assets/map-latam.svg    nuevo, va en la carpeta assets/
 
-  es/eventos/index.html      (reemplaza el existente)
-  en/events/index.html       (reemplaza el existente)
-  pt/eventos/index.html      (reemplaza el existente)
-  es/empresas/index.html     (NUEVO — página oculta)
+CÓMO SUBIRLO
+1. Copiá index.html sobre el que está en la raíz del repo.
+2. Copiá map-latam.svg dentro de tu carpeta assets/.
+3. Commit + push.
 
-CÓMO SUBIRLO A GITHUB
-1. Descomprimí el zip.
-2. Copiá las carpetas es/ en/ pt/ sobre las de tu repo, pisando los archivos
-   que ya existen. La carpeta es/empresas/ se agrega nueva.
-3. Commit + push a la rama de siempre (main).
+No toca style.css: los estilos nuevos están dentro del propio index.html.
 
-QUÉ CAMBIÓ EN EVENTOS
-- SUSU Conversations #1: ahora con detalles — Tigre, Buenos Aires, 2 de
-  septiembre de 2026, alrededor de 15 personas, y el propósito del encuentro
-  (comunidad, red, networking, colaboraciones concretas).
-- SUSU Conversations #2: nueva tarjeta — Buenos Aires, noviembre de 2026,
-  fecha a confirmar.
-- Ambas en los 3 idiomas, con el mismo formato de tarjeta de siempre.
-- No se publica la dirección exacta ni el nombre del lugar, porque es una
-  residencia privada. Si querés que aparezca, avisame.
+QUÉ CAMBIÓ
+- Se sacó el texto "Choose your language." Las banderas ya se explican solas.
+- Se agregó un mapa de Latinoamérica hecho con puntos, con nueve nodos
+  marcados en verde y unidos por líneas: la idea de red y comunidad.
+  Buenos Aires aparece más grande, por ser la sede del primer encuentro.
+- Debajo del mapa, el lema en los tres idiomas.
+- Los tres bloques aparecen con un fundido suave y escalonado al cargar.
+  Si alguien tiene activada la reducción de movimiento en su sistema, la
+  animación no se ejecuta.
 
-LA PÁGINA OCULTA DE EMPRESAS
-Queda en:  susulatam.com/es/empresas/
+SOBRE EL MAPA
+Es un SVG vectorial dibujado desde cero, no una imagen: pesa 46 KB, se ve
+nítido en cualquier pantalla y no rompe la calificación A+ de huella digital
+del sitio. Los contornos son coordenadas geográficas reales, rellenadas con
+una trama de puntos.
 
-- No está enlazada desde ningún menú ni desde ninguna página: solo llegás
-  escribiendo la URL.
-- Lleva la etiqueta noindex/nofollow, así Google no la indexa.
-- Arriba tiene una franja verde que dice "Borrador interno" para que no se
-  confunda con una página publicada. Cuando la quieras publicar, se borra
-  esa franja, se borra la línea del <meta name="robots">, y se agrega el
-  link en el menú.
+Nodos marcados: Ciudad de México, Bogotá, Lima, Río de Janeiro, São Paulo,
+Montevideo, Santiago, Patagonia y Buenos Aires.
 
-IMPORTANTE: "oculta" no es lo mismo que "privada". Cualquiera que tenga la
-URL puede verla. En un sitio estático de GitHub Pages no hay forma de poner
-contraseña. No pongas ahí nada que no puedas mostrar si se filtra.
+Las líneas de conexión trazan un recorrido que baja por la costa atlántica
+(Bogotá - São Paulo - Río - Montevideo - Buenos Aires), llega a la Patagonia,
+y vuelve a subir por el Pacífico (Santiago - Lima - Bogotá - Ciudad de México).
 
-Nota: a propósito NO la agregué al robots.txt. Ese archivo es público, así
-que listar la carpeta ahí sería justamente la forma más fácil de que alguien
-descubra la URL.
+Para "Patagonia" usé un punto a la altura de Bariloche, ya que es una región
+y no una ciudad. Si preferís otro punto (Ushuaia, El Calafate, Puerto Madryn),
+decime y lo muevo.
 
-CÓMO PONER LOS LOGOS
-Los recuadros están listos, cada uno con el nombre de la empresa como
-referencia. Para poner un logo:
-
-1. Guardá el archivo del logo en:  assets/logos/nombre-empresa.svg
-   (o .png con fondo transparente)
-
-2. En es/empresas/index.html, reemplazá esta línea:
-
-     <div class="logo-slot"><span>BASF</span></div>
-
-   por esta:
-
-     <div class="logo-slot"><img src="../../assets/logos/basf.svg" alt="BASF"></div>
-
-3. Listo. La hoja de estilos ya los convierte automáticamente a blanco
-   (filter: brightness(0) invert(1)), así que funcionan sobre el fondo azul
-   aunque el logo original venga en color.
-
-Los logos tenés que conseguirlos vos: son marcas registradas de cada empresa
-y no puedo reproducirlos. Casi todas tienen un "brand kit" o una sección de
-prensa en su web. Lo ideal igual es pedírselos al contacto de cada empresa,
-porque suelen tener normas de uso de marca y así además queda avisado que
-van a aparecer.
+Si querés sumar, sacar o cambiar algún nodo, avisame.

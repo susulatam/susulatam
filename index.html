@@ -1,1 +1,47 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SUSU LATAM</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head><body><main class="language-home"><div class="language-box"><div class="logo-mark"><span>SUSU</span><small>LATAM</small></div><h1>Choose your language.</h1><p>Great communities start with conversations.</p><div class="language-options"><a href="en/"><img src="assets/flags/gb.svg" alt="English"> English</a><a href="es/"><img src="assets/flags/es.svg" alt="Español"> Español</a><a href="pt/"><img src="assets/flags/br.svg" alt="Português"> Português</a></div></div></main></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SUSU LATAM</title><meta name="description" content="SUSU LATAM — comunidad para quienes construyen el futuro sustentable de Latinoamérica."><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+<style>
+/* Estilos propios de la portada. No modifican style.css. */
+.gate{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:44px 22px}
+.gate-inner{width:100%;max-width:760px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:30px}
+.gate .logo-mark{display:block}
+.gate-map{width:100%;display:flex;justify-content:center}
+.gate-map img{width:auto;height:min(46vh,380px);max-width:100%;display:block;opacity:0;animation:gateIn 1.1s ease-out .15s forwards}
+@keyframes gateIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.gate-taglines{display:flex;flex-direction:column;gap:5px;opacity:0;animation:gateIn 1.1s ease-out .5s forwards}
+.gate-taglines p{margin:0;font-size:14px;line-height:1.5;color:#94A3B8}
+.gate-taglines p:first-child{color:#E2E8F0}
+.gate .language-options{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;opacity:0;animation:gateIn 1.1s ease-out .75s forwards}
+@media(max-width:600px){
+  .gate-inner{gap:24px}
+  .gate-map img{height:min(38vh,300px)}
+  .gate-taglines p{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){
+  .gate-map img,.gate-taglines,.gate .language-options{animation:none;opacity:1}
+}
+</style>
+</head><body>
+<main class="gate">
+  <div class="gate-inner">
+
+    <div class="logo-mark"><span>SUSU</span><small>LATAM</small></div>
+
+    <div class="gate-map">
+      <img src="assets/map-latam.svg" alt="Mapa de Latinoamérica con las ciudades conectadas por la comunidad SUSU" width="620" height="900">
+    </div>
+
+    <div class="gate-taglines">
+      <p>Las grandes comunidades empiezan con una conversación.</p>
+      <p>Great communities start with a conversation.</p>
+      <p>As grandes comunidades começam com uma conversa.</p>
+    </div>
+
+    <div class="language-options">
+      <a href="en/"><img src="assets/flags/gb.svg" alt="English"> English</a>
+      <a href="es/"><img src="assets/flags/es.svg" alt="Español"> Español</a>
+      <a href="pt/"><img src="assets/flags/br.svg" alt="Português"> Português</a>
+    </div>
+
+  </div>
+</main>
+</body></html>
