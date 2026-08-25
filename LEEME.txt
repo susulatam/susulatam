@@ -1,42 +1,38 @@
-SUSU LATAM — Portada nueva (selector de idioma)
-===============================================
-
-ARCHIVOS
-  index.html              reemplaza el de la raíz del repo
-  assets/map-latam.svg    nuevo, va en la carpeta assets/
-
-CÓMO SUBIRLO
-1. Copiá index.html sobre el que está en la raíz del repo.
-2. Copiá map-latam.svg dentro de tu carpeta assets/.
-3. Commit + push.
-
-No toca style.css: los estilos nuevos están dentro del propio index.html.
+SUSU LATAM — Barra superior nueva y LinkedIn
+============================================
 
 QUÉ CAMBIÓ
-- Se sacó el texto "Choose your language." Las banderas ya se explican solas.
-- Se agregó un mapa de Latinoamérica hecho con puntos, con nueve nodos
-  marcados en verde y unidos por líneas: la idea de red y comunidad.
-  Buenos Aires aparece más grande, por ser la sede del primer encuentro.
-- Debajo del mapa, el lema en los tres idiomas.
-- Los tres bloques aparecen con un fundido suave y escalonado al cargar.
-  Si alguien tiene activada la reducción de movimiento en su sistema, la
-  animación no se ejecuta.
+- El texto "Menú ▾" se reemplazó por el ícono de tres rayas.
+- A su izquierda aparece la bandera del idioma que estás viendo. Al tocarla se
+  despliegan las otras dos para cambiar de idioma.
+- Se sumó un botón de LinkedIn en el pie de todas las subpáginas, con link a
+  linkedin.com/company/susulatam/ (abre en pestaña nueva).
+- Todo queda idéntico en las 13 subpáginas.
+- La portada (la del mapa) NO se toca, tal como pediste.
 
-SOBRE EL MAPA
-Es un SVG vectorial dibujado desde cero, no una imagen: pesa 46 KB, se ve
-nítido en cualquier pantalla y no rompe la calificación A+ de huella digital
-del sitio. Los contornos son coordenadas geográficas reales, rellenadas con
-una trama de puntos.
+ARCHIVOS DEL ZIP
+  assets/nav.css      NUEVO — estilos de la barra y del botón de LinkedIn
+  assets/nav.js       NUEVO — comportamiento de los desplegables
+  es/  en/  pt/       las 13 subpáginas, reemplazan a las actuales
 
-Nodos marcados: Ciudad de México, Bogotá, Lima, Río de Janeiro, São Paulo,
-Montevideo, Santiago, Patagonia y Buenos Aires.
+CÓMO SUBIRLO A GITHUB
+1. Copiá nav.css y nav.js dentro de tu carpeta assets/.
+2. Copiá las carpetas es/ en/ pt/ sobre las del repo, pisando lo que hay.
+3. Commit + push.
 
-Las líneas de conexión trazan un recorrido que baja por la costa atlántica
-(Bogotá - São Paulo - Río - Montevideo - Buenos Aires), llega a la Patagonia,
-y vuelve a subir por el Pacífico (Santiago - Lima - Bogotá - Ciudad de México).
+No se toca style.css: los estilos nuevos van en assets/nav.css. Si algún día
+querés volver atrás, alcanza con restaurar los HTML anteriores.
 
-Para "Patagonia" usé un punto a la altura de Bariloche, ya que es una región
-y no una ciudad. Si preferís otro punto (Ushuaia, El Calafate, Puerto Madryn),
-decime y lo muevo.
+DETALLES DE FUNCIONAMIENTO
+- Se abre un solo panel a la vez: si abrís el menú, se cierra el de idiomas.
+- Se cierran haciendo clic en cualquier otro lado, o con la tecla Escape.
+- La hamburguesa se convierte en una X cuando el menú está abierto.
+- Los botones se pueden usar con teclado y tienen etiquetas para lectores de
+  pantalla ("Cambiar idioma" / "Abrir menú").
 
-Si querés sumar, sacar o cambiar algún nodo, avisame.
+SOBRE EL ÍCONO DE LINKEDIN
+El "in" está compuesto con la tipografía del sitio dentro de un cuadrado
+redondeado, en los colores de SUSU. Preferí no reproducir el logo oficial de
+LinkedIn, que es una marca registrada. Si querés usar el oficial, se descarga
+de brand.linkedin.com y se reemplaza el <span class="li-mark">in</span> por
+la imagen. Avisame y te lo dejo armado.
