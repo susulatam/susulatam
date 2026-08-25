@@ -1,38 +1,47 @@
-SUSU LATAM — Barra superior nueva y LinkedIn
-============================================
+SUSU LATAM v24 — Reencuadre hacia el Sustainability Summit
+==========================================================
+
+LA IDEA EDITORIAL
+La web ahora dice con todas las letras que el destino es el Sustainability
+Summit de Latinoamérica, y al mismo tiempo deja claro en qué escalón estamos
+hoy. Ese equilibrio es a propósito: un sponsor que verifica encuentra una
+ambición grande con un plan por etapas, en vez de un evento inflado.
 
 QUÉ CAMBIÓ
-- El texto "Menú ▾" se reemplazó por el ícono de tres rayas.
-- A su izquierda aparece la bandera del idioma que estás viendo. Al tocarla se
-  despliegan las otras dos para cambiar de idioma.
-- Se sumó un botón de LinkedIn en el pie de todas las subpáginas, con link a
-  linkedin.com/company/susulatam/ (abre en pestaña nueva).
-- Todo queda idéntico en las 13 subpáginas.
-- La portada (la del mapa) NO se toca, tal como pediste.
+- Nueva página "Qué es SUSU" (about / o-que-e), primera en el menú.
+- Home reescrito: el titular ahora es la ambición del Summit; abajo se explica
+  que hoy estamos en la etapa Conversations.
+- Se sacó el texto viejo "estamos armando el primer encuentro, muy pronto vas
+  a poder conocer los detalles", que ya no correspondía.
+- Eventos pasa a llamarse "El camino al Summit" y suma una tercera tarjeta:
+  SUSU Summit, 2027, en preparación.
+- Sponsors reencuadrado: "acompañá desde el principio", con el argumento de
+  que quien entra ahora aparece en la historia de cómo empezó.
+- SUSU Impact ahora aclara que el compromiso vale igual para un desayuno de
+  quince personas que para el Summit.
+- Pie actualizado en los tres idiomas.
 
-ARCHIVOS DEL ZIP
-  assets/nav.css      NUEVO — estilos de la barra y del botón de LinkedIn
-  assets/nav.js       NUEVO — comportamiento de los desplegables
-  es/  en/  pt/       las 13 subpáginas, reemplazan a las actuales
+ARCHIVOS
+  assets/nav.css, assets/nav.js     (iguales a v23; si ya los subiste, se pisan)
+  es/ en/ pt/                        16 páginas
 
-CÓMO SUBIRLO A GITHUB
-1. Copiá nav.css y nav.js dentro de tu carpeta assets/.
-2. Copiá las carpetas es/ en/ pt/ sobre las del repo, pisando lo que hay.
+CÓMO SUBIRLO
+1. Copiá assets/ sobre tu carpeta assets/.
+2. Copiá es/ en/ pt/ sobre las del repo.
 3. Commit + push.
+No toca style.css ni la portada del mapa.
 
-No se toca style.css: los estilos nuevos van en assets/nav.css. Si algún día
-querés volver atrás, alcanza con restaurar los HTML anteriores.
+LOS DOS DATOS QUE USA LA PÁGINA "QUÉ ES SUSU"
+- Cerca del 60% de la vida terrestre, marina y de agua dulce del planeta está
+  en América Latina y el Caribe (Programa de la ONU para el Medio Ambiente).
+- El 67% de la electricidad de la región ya viene de fuentes limpias
+  (Panorama Energético 2025, OLACDE).
+Están atribuidos en el texto. Si en algún momento quedan desactualizados,
+conviene revisarlos: son verificables y alguien los va a chequear.
 
-DETALLES DE FUNCIONAMIENTO
-- Se abre un solo panel a la vez: si abrís el menú, se cierra el de idiomas.
-- Se cierran haciendo clic en cualquier otro lado, o con la tecla Escape.
-- La hamburguesa se convierte en una X cuando el menú está abierto.
-- Los botones se pueden usar con teclado y tienen etiquetas para lectores de
-  pantalla ("Cambiar idioma" / "Abrir menú").
-
-SOBRE EL ÍCONO DE LINKEDIN
-El "in" está compuesto con la tipografía del sitio dentro de un cuadrado
-redondeado, en los colores de SUSU. Preferí no reproducir el logo oficial de
-LinkedIn, que es una marca registrada. Si querés usar el oficial, se descarga
-de brand.linkedin.com y se reemplaza el <span class="li-mark">in</span> por
-la imagen. Avisame y te lo dejo armado.
+PENDIENTE PARA CUANDO TENGAS EL MATERIAL
+Después del 2 de septiembre vas a tener fotos y video. Ahí conviene sumar:
+- Una galería en la página de Eventos.
+- Testimonios de los participantes.
+- El número real de SUSU Impact.
+Avisame y lo armo.
