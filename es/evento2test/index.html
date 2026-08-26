@@ -1,0 +1,345 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SUSU Sessions · Buenos Aires — Página de prueba</title>
+<meta name="description" content="Borrador de trabajo del segundo encuentro de SUSU LATAM.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../assets/nav.css">
+<style>
+/* Estilos propios de esta página. No tocan style.css ni nav.css. */
+.draft-flag{background:#22C55E;color:#0F172A;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:10px 16px}
+
+.e2-wrap{width:min(1120px,92%);margin:0 auto}
+.e2-eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#22C55E;font-weight:800;margin:0 0 14px}
+.e2-h2{font-size:clamp(28px,4vw,42px);line-height:1.12;margin:0 0 16px;color:#fff}
+.e2-lead{font-size:17px;line-height:1.65;color:#94A3B8;max-width:70ch;margin:0 0 34px}
+.e2-section{padding:74px 0;border-top:1px solid rgba(255,255,255,.08)}
+
+/* --- barra de anclas --- */
+.e2-anchors{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.93);backdrop-filter:blur(9px);border-bottom:1px solid rgba(255,255,255,.1)}
+.e2-anchors nav{width:min(1120px,92%);margin:0 auto;display:flex;gap:6px;overflow-x:auto;padding:11px 0}
+.e2-anchors a{white-space:nowrap;padding:8px 14px;border-radius:9px;font-size:13px;font-weight:700;color:#CBD5E1;text-decoration:none}
+.e2-anchors a:hover{background:rgba(255,255,255,.07);color:#22C55E}
+
+/* --- hero --- */
+.e2-hero{padding:70px 0 60px}
+.e2-hero h1{font-size:clamp(38px,6.4vw,74px);line-height:1.04;margin:0 0 20px;color:#fff;max-width:19ch}
+.e2-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);border-radius:15px;overflow:hidden;margin:38px 0 32px}
+.e2-fact{background:#0F172A;padding:20px 22px}
+.e2-fact span{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#22C55E;font-weight:800;margin-bottom:7px}
+.e2-fact strong{display:block;font-size:17px;font-weight:800;color:#fff;line-height:1.35}
+.e2-fact em{display:block;font-style:normal;font-size:13px;color:#94A3B8;margin-top:3px}
+.e2-quick{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}
+.e2-quick span{font-size:13px;color:#CBD5E1;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 14px}
+
+/* --- grillas de tarjetas --- */
+.e2-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:18px}
+.e2-card{border:1px solid rgba(255,255,255,.13);border-radius:15px;padding:24px}
+.e2-card h3{font-size:18px;margin:0 0 9px;color:#fff}
+.e2-card p{font-size:14px;line-height:1.6;color:#94A3B8;margin:0}
+.e2-card .num{display:block;font-size:13px;font-weight:800;color:#22C55E;margin-bottom:11px}
+
+/* --- tracks --- */
+.e2-track{border:1px solid rgba(255,255,255,.13);border-radius:15px;margin-bottom:13px;overflow:hidden}
+.e2-track > button{width:100%;display:flex;align-items:center;gap:16px;padding:22px 24px;background:transparent;border:0;cursor:pointer;text-align:left;font-family:inherit;color:#fff}
+.e2-track > button:hover{background:rgba(255,255,255,.04)}
+.e2-track .t-num{flex:none;width:42px;height:42px;border-radius:11px;background:rgba(34,197,94,.15);color:#22C55E;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+.e2-track .t-title{flex:1}
+.e2-track .t-title strong{display:block;font-size:19px;font-weight:800;line-height:1.3}
+.e2-track .t-title em{font-style:normal;font-size:13px;color:#94A3B8}
+.e2-track .t-plus{flex:none;width:13px;height:13px;position:relative}
+.e2-track .t-plus::before,.e2-track .t-plus::after{content:"";position:absolute;background:#22C55E;border-radius:2px;transition:transform .22s ease}
+.e2-track .t-plus::before{left:0;top:5.5px;width:13px;height:2px}
+.e2-track .t-plus::after{top:0;left:5.5px;height:13px;width:2px}
+.e2-track.open .t-plus::after{transform:rotate(90deg)}
+.e2-panels{display:none;padding:0 24px 8px}
+.e2-track.open .e2-panels{display:block}
+.e2-panel{border-top:1px solid rgba(255,255,255,.09);padding:17px 0}
+.e2-panel h4{font-size:16px;margin:0 0 6px;color:#fff}
+.e2-panel p{font-size:14px;line-height:1.6;color:#94A3B8;margin:0}
+
+/* --- entradas --- */
+.e2-tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(276px,1fr));gap:18px;align-items:start}
+.e2-tier{border:1px solid rgba(255,255,255,.14);border-radius:17px;padding:28px;display:flex;flex-direction:column;gap:16px}
+.e2-tier.feat{border-color:#22C55E;background:rgba(34,197,94,.05)}
+.e2-tier .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#22C55E}
+.e2-tier h3{font-size:22px;margin:0;color:#fff}
+.e2-tier .price{font-size:30px;font-weight:800;color:#fff;line-height:1}
+.e2-tier .price small{display:block;font-size:13px;font-weight:600;color:#94A3B8;margin-top:6px}
+.e2-tier > p{font-size:14px;line-height:1.6;color:#94A3B8;margin:0}
+.e2-tier ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.e2-tier li{font-size:14px;color:#CBD5E1;padding-left:24px;position:relative;line-height:1.5}
+.e2-tier li::before{content:"";position:absolute;left:0;top:6px;width:12px;height:7px;border-left:2px solid #22C55E;border-bottom:2px solid #22C55E;transform:rotate(-45deg)}
+.e2-cap{font-size:13px;color:#94A3B8;margin:20px 0 0}
+
+/* --- faq --- */
+.e2-faq{border-bottom:1px solid rgba(255,255,255,.1)}
+.e2-faq button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:19px 0;background:none;border:0;cursor:pointer;font-family:inherit;color:#fff;font-size:16px;font-weight:700;text-align:left}
+.e2-faq .a{display:none;padding:0 0 19px;font-size:14px;line-height:1.65;color:#94A3B8;max-width:78ch}
+.e2-faq.open .a{display:block}
+.e2-faq .t-plus{flex:none;width:13px;height:13px;position:relative}
+.e2-faq .t-plus::before,.e2-faq .t-plus::after{content:"";position:absolute;background:#22C55E;border-radius:2px;transition:transform .22s ease}
+.e2-faq .t-plus::before{left:0;top:5.5px;width:13px;height:2px}
+.e2-faq .t-plus::after{top:0;left:5.5px;height:13px;width:2px}
+.e2-faq.open .t-plus::after{transform:rotate(90deg)}
+
+.e2-note{border:1px dashed rgba(34,197,94,.45);border-radius:14px;padding:22px 24px;margin:34px 0 0;background:rgba(34,197,94,.05)}
+.e2-note p{margin:0 0 9px;font-size:14px;line-height:1.6;color:#CBD5E1}
+.e2-note p:last-child{margin:0}
+.e2-note strong{color:#22C55E}
+
+@media(max-width:700px){.e2-section{padding:54px 0}.e2-hero{padding:48px 0 40px}}
+</style>
+</head><body>
+
+<div class="draft-flag">Página de prueba · no está enlazada ni indexada</div>
+
+<header class="nav">
+<a class="logo-mark" href="../../"><span>SUSU</span><small>LATAM</small></a>
+<div class="nav-right">
+<div class="ui-menu lang-switch">
+<button class="ui-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Cambiar idioma">
+<img class="flag" src="../../assets/flags/es.svg" alt="Español">
+<svg class="chev" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<div class="ui-panel"><a href="../../en/"><img src="../../assets/flags/gb.svg" alt="">English</a><a href="../../pt/"><img src="../../assets/flags/br.svg" alt="">Português</a></div>
+</div>
+<div class="ui-menu main-menu">
+<button class="ui-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir menú">
+<span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
+<div class="ui-panel"><a href="../que-es/">Qué es SUSU</a><a href="../eventos/">Eventos</a><a href="../sponsors/">Sumate como sponsor</a><a href="../impact/">SUSU Impact</a></div>
+</div>
+</div>
+</header>
+
+<div class="e2-anchors"><nav>
+<a href="#porque">El contexto</a><a href="#tracks">Contenido</a><a href="#publico">Para quién es</a><a href="#entradas">Cómo participar</a><a href="#curadores">Consejo curador</a><a href="#faq">Preguntas</a>
+</nav></div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="e2-hero"><div class="e2-wrap">
+<p class="e2-eyebrow">SUSU Sessions · Segunda edición</p>
+<h1>La sustentabilidad de la región, en una sola jornada.</h1>
+<p class="e2-lead">Un día de charlas, paneles y encuentros sobre lo que ya está funcionando en Latinoamérica. Cuatro ejes temáticos, referentes de distintas industrias, y el formato de conversación que hace a SUSU llevado a escala.</p>
+
+<div class="e2-facts">
+<div class="e2-fact"><span>Fecha</span><strong>[Mes] de 2027</strong><em>A confirmar</em></div>
+<div class="e2-fact"><span>Horario</span><strong>9:00 a 19:00</strong><em>Jornada completa</em></div>
+<div class="e2-fact"><span>Lugar</span><strong>Domo del Parque de la Innovación</strong><em>Buenos Aires · Argentina</em></div>
+<div class="e2-fact"><span>Cupo</span><strong>[300] personas</strong><em>Presencial, con inscripción</em></div>
+</div>
+
+<div class="cta-row">
+<a class="button" href="https://forms.gle/YQpwiHDhgTH37HHL8" target="_blank" rel="noopener">Quiero inscribirme</a>
+<a class="button secondary" href="#entradas">Ver cómo participar</a>
+</div>
+
+<div class="e2-quick"><span>4 ejes temáticos</span><span>+20 oradores</span><span>Networking curado</span><span>Huella compensada</span></div>
+</div></section>
+
+<!-- ============ CONTEXTO ============ -->
+<section class="e2-section" id="porque"><div class="e2-wrap">
+<p class="e2-eyebrow">El contexto</p>
+<h2 class="e2-h2">La región tiene las respuestas. Falta ponerlas en la misma sala.</h2>
+<p class="e2-lead">Latinoamérica concentra buena parte de la biodiversidad del planeta y una de las matrices eléctricas más limpias del mundo. Pero las decisiones se toman de forma aislada: cada industria resuelve por su cuenta, y las soluciones que ya funcionan no circulan. Este encuentro existe para cambiar eso.</p>
+<div class="e2-grid">
+<div class="e2-card"><span class="num">01</span><h3>Lo que ya funciona</h3><p>Casos reales, con números y resultados. Sin promesas ni proyectos en PowerPoint.</p></div>
+<div class="e2-card"><span class="num">02</span><h3>Lo que traba</h3><p>Regulación, financiamiento y medición: los cuellos de botella concretos de cada sector.</p></div>
+<div class="e2-card"><span class="num">03</span><h3>Quién lo está haciendo</h3><p>Las personas detrás de los proyectos, disponibles para conversar durante todo el día.</p></div>
+<div class="e2-card"><span class="num">04</span><h3>Qué sigue</h3><p>Espacios de trabajo para que de la jornada salgan acuerdos, no solo apuntes.</p></div>
+</div>
+</div></section>
+
+<!-- ============ TRACKS ============ -->
+<section class="e2-section" id="tracks"><div class="e2-wrap">
+<p class="e2-eyebrow">Contenido</p>
+<h2 class="e2-h2">Cuatro ejes temáticos</h2>
+<p class="e2-lead">Tocá cada eje para ver los paneles. Los temas son generales a propósito: la idea es que cualquier persona que trabaje en sustentabilidad encuentre al menos dos bloques que le sirvan.</p>
+
+<div class="e2-track">
+<button type="button"><span class="t-num">01</span><span class="t-title"><strong>Energía y transición</strong><em>Cómo se mueve la matriz de la región</em></span><span class="t-plus"></span></button>
+<div class="e2-panels">
+<div class="e2-panel"><h4>La matriz más limpia del mundo, ¿y ahora qué?</h4><p>Latinoamérica ya genera la mayor parte de su electricidad con fuentes limpias. El desafío dejó de ser generar y pasó a ser almacenar, transportar y sostener.</p></div>
+<div class="e2-panel"><h4>Electrificar lo difícil</h4><p>Transporte pesado, industria y calor de proceso: los sectores donde la transición todavía no encontró su camino.</p></div>
+<div class="e2-panel"><h4>Eficiencia antes que sustitución</h4><p>La energía más limpia sigue siendo la que no se consume. Casos de reducción real en plantas y edificios.</p></div>
+</div></div>
+
+<div class="e2-track">
+<button type="button"><span class="t-num">02</span><span class="t-title"><strong>Naturaleza, agro y carbono</strong><em>El activo que la región ya tiene</em></span><span class="t-plus"></span></button>
+<div class="e2-panels">
+<div class="e2-panel"><h4>Mercados de carbono: qué se aprendió</h4><p>Después de años de promesas, qué proyectos funcionaron, cuáles no, y cómo distinguir un crédito serio de uno que no lo es.</p></div>
+<div class="e2-panel"><h4>Agricultura regenerativa a escala</h4><p>Del ensayo en una hectárea a la adopción en la cadena de valor: qué hace falta para que el productor cambie de práctica.</p></div>
+<div class="e2-panel"><h4>Agua: el tema que llega después</h4><p>Huella hídrica, cuencas compartidas y competencia por el recurso entre agro, industria y ciudades.</p></div>
+<div class="e2-panel"><h4>Biodiversidad como activo</h4><p>Nuevos modelos que le ponen valor económico a conservar, y por qué la región está bien posicionada.</p></div>
+</div></div>
+
+<div class="e2-track">
+<button type="button"><span class="t-num">03</span><span class="t-title"><strong>Industria, ciudades y economía circular</strong><em>Producir y construir distinto</em></span><span class="t-plus"></span></button>
+<div class="e2-panels">
+<div class="e2-panel"><h4>Envases, residuos y el consumidor real</h4><p>Qué funciona de verdad en reciclado y retornabilidad, más allá del sello en el paquete.</p></div>
+<div class="e2-panel"><h4>Construir con menos carbono</h4><p>Cemento, acero y materiales alternativos en una región que todavía tiene mucho por construir.</p></div>
+<div class="e2-panel"><h4>La cadena de proveedores</h4><p>Hasta dónde llega la responsabilidad de una empresa sobre lo que hacen sus proveedores, y cómo se controla.</p></div>
+</div></div>
+
+<div class="e2-track">
+<button type="button"><span class="t-num">04</span><span class="t-title"><strong>Capital, datos y regulación</strong><em>Lo que habilita o frena todo lo anterior</em></span><span class="t-plus"></span></button>
+<div class="e2-panels">
+<div class="e2-panel"><h4>Qué hace a un proyecto financiable</h4><p>Bancos, fondos e inversores de impacto explican qué miran y por qué rechazan la mayoría de lo que reciben.</p></div>
+<div class="e2-panel"><h4>Medir en serio</h4><p>Cómo se distingue una empresa que mide de una que reporta lindo. Metodologías, verificación y datos auditables.</p></div>
+<div class="e2-panel"><h4>Tecnología aplicada, sin humo</h4><p>Dónde la IA y el sensado remoto están resolviendo problemas concretos de medición, y dónde son solo relato.</p></div>
+<div class="e2-panel"><h4>Lo que viene en regulación</h4><p>Normativas internacionales que ya afectan a quien exporta desde la región, explicadas en criollo.</p></div>
+</div></div>
+
+</div></section>
+
+<!-- ============ PÚBLICO ============ -->
+<section class="e2-section" id="publico"><div class="e2-wrap">
+<p class="e2-eyebrow">Para quién es</p>
+<h2 class="e2-h2">Pensado para quien toma decisiones</h2>
+<p class="e2-lead">Si trabajás en alguno de estos lugares, el día te va a rendir. Si no, preferimos decírtelo antes.</p>
+<div class="e2-grid">
+<div class="e2-card"><h3>Áreas de sustentabilidad</h3><p>De empresas que ya tienen compromisos asumidos y necesitan ejecutarlos.</p></div>
+<div class="e2-card"><h3>Dirección y gerencia</h3><p>Quienes deciden inversiones y tienen que justificar el retorno de lo ambiental.</p></div>
+<div class="e2-card"><h3>Inversores y financiamiento</h3><p>Fondos, bancos y capital de impacto buscando proyectos serios en la región.</p></div>
+<div class="e2-card"><h3>Startups y tecnología</h3><p>Equipos que están resolviendo problemas concretos y buscan clientes o socios.</p></div>
+<div class="e2-card"><h3>Academia e investigación</h3><p>Quienes producen el conocimiento que después necesita bajar a la práctica.</p></div>
+<div class="e2-card"><h3>Sector público y organizaciones</h3><p>Los que escriben las reglas y los que trabajan donde el impacto se siente.</p></div>
+</div>
+</div></section>
+
+<!-- ============ ENTRADAS ============ -->
+<section class="e2-section" id="entradas"><div class="e2-wrap">
+<p class="e2-eyebrow">Cómo participar</p>
+<h2 class="e2-h2">Tres formas de estar</h2>
+<p class="e2-lead">El cupo del domo es limitado y real. Cuando se completa, se completa.</p>
+
+<div class="e2-tiers">
+
+<div class="e2-tier">
+<span class="tag">Con inscripción</span>
+<h3>General</h3>
+<div class="price">Sin cargo<small>Cupo limitado</small></div>
+<p>Una parte de los lugares se reserva sin cargo para que el encuentro no quede restringido a quien puede pagar.</p>
+<ul>
+<li>Acceso a los cuatro ejes temáticos</li>
+<li>Café de bienvenida</li>
+<li>Materiales de la jornada por email</li>
+</ul>
+<a class="button secondary" href="https://forms.gle/YQpwiHDhgTH37HHL8" target="_blank" rel="noopener">Anotarme en la lista</a>
+</div>
+
+<div class="e2-tier feat">
+<span class="tag">La experiencia completa</span>
+<h3>Profesional</h3>
+<div class="price">$ [precio]<small>Por persona</small></div>
+<p>Para quien viene a trabajar el día entero: acceso a todo, almuerzo incluido y lugar en las mesas de trabajo.</p>
+<ul>
+<li>Todo lo del acceso general</li>
+<li>Almuerzo y coffee breaks</li>
+<li>Lugar en las mesas de trabajo de la tarde</li>
+<li>Acceso prioritario a las charlas más pedidas</li>
+<li>Prioridad de invitación a los SUSU Conversations</li>
+</ul>
+<a class="button" href="#" >Comprar entrada</a>
+</div>
+
+<div class="e2-tier">
+<span class="tag">Para empresas</span>
+<h3>Corporativa</h3>
+<div class="price">$ [precio]<small>Pack de [5] lugares</small></div>
+<p>Para equipos que quieren venir juntos y repartir la agenda entre varias personas.</p>
+<ul>
+<li>[5] entradas Profesional</li>
+<li>Mención de la empresa en el listado de participantes</li>
+<li>Una reunión de seguimiento posterior con SUSU</li>
+</ul>
+<a class="button secondary" href="mailto:info@susulatam.com?subject=Entrada%20corporativa">Consultar</a>
+</div>
+
+</div>
+
+<p class="e2-cap">Los oradores, la prensa y los invitados institucionales no pagan entrada, como en cualquier encuentro de este tipo.</p>
+
+<div class="e2-note">
+<p><strong>Nota interna — borrar antes de publicar.</strong></p>
+<p>Los precios y el cupo están entre corchetes para que los completes. Dos cosas a definir antes de publicar esta página:</p>
+<p>1. <strong>Cobro.</strong> Si vas a vender entradas, conviene resolver antes cómo facturás y a qué cuenta entra la plata. Cobrar en una cuenta personal sin comprobante te puede traer un problema impositivo justo cuando el proyecto empieza a crecer. Vale la pena consultarlo con un contador.</p>
+<p>2. <strong>Cupo.</strong> Poné el número real del domo. Si después se llena, "agotado" es verdad y funciona igual de bien.</p>
+</div>
+</div></section>
+
+<!-- ============ CURADORES ============ -->
+<section class="e2-section" id="curadores"><div class="e2-wrap">
+<p class="e2-eyebrow">Consejo curador</p>
+<h2 class="e2-h2">Quiénes eligen el contenido</h2>
+<p class="e2-lead">El programa no lo arma una agencia: lo arman personas que trabajan en el tema todos los días, cada una desde su industria. Son quienes participaron de los SUSU Conversations.</p>
+<div class="e2-grid">
+<div class="e2-card"><h3>[Nombre]</h3><p>[Empresa] · [Industria]</p></div>
+<div class="e2-card"><h3>[Nombre]</h3><p>[Empresa] · [Industria]</p></div>
+<div class="e2-card"><h3>[Nombre]</h3><p>[Empresa] · [Industria]</p></div>
+<div class="e2-card"><h3>[Nombre]</h3><p>[Empresa] · [Industria]</p></div>
+<div class="e2-card"><h3>[Nombre]</h3><p>[Empresa] · [Industria]</p></div>
+<div class="e2-card"><h3>[Nombre]</h3><p>[Empresa] · [Industria]</p></div>
+</div>
+<div class="e2-note">
+<p><strong>Nota interna.</strong> Dejé los nombres en blanco a propósito: hay que pedirle el ok a cada persona antes de publicarla como parte del consejo curador. Es un pedido fácil de hacer y casi todos dicen que sí, porque a ellos también les suma. Pero preguntá primero.</p>
+</div>
+</div></section>
+
+<!-- ============ SPONSORS ============ -->
+<section class="e2-section"><div class="e2-wrap">
+<p class="e2-eyebrow">Para marcas e instituciones</p>
+<h2 class="e2-h2">Sponsors</h2>
+<p class="e2-lead">Acompañar SUSU Sessions no es poner un logo en un banner: es participar de la curaduría, tener lugar en el contenido y llevar a tus invitados.</p>
+<div class="e2-grid">
+<div class="e2-card"><span class="num">01</span><h3>Presencia en el contenido</h3><p>Un lugar en el panel del eje que corresponda a tu industria.</p></div>
+<div class="e2-card"><span class="num">02</span><h3>Entradas para invitar</h3><p>Un paquete de lugares para que traigas a tus clientes y equipo.</p></div>
+<div class="e2-card"><span class="num">03</span><h3>Espacio en el domo</h3><p>Un lugar propio para mostrar lo que hacés durante toda la jornada.</p></div>
+<div class="e2-card"><span class="num">04</span><h3>Visibilidad todo el año</h3><p>Presencia en la comunidad SUSU, no solo el día del evento.</p></div>
+</div>
+<div class="cta-row" style="margin-top:30px"><a class="button" href="mailto:info@susulatam.com?subject=Sponsor%20SUSU%20Sessions">Quiero ser sponsor</a></div>
+</div></section>
+
+<!-- ============ FAQ ============ -->
+<section class="e2-section" id="faq"><div class="e2-wrap">
+<p class="e2-eyebrow">Preguntas</p>
+<h2 class="e2-h2">Lo que suelen preguntarnos</h2>
+<div style="margin-top:26px">
+<div class="e2-faq"><button type="button">¿Hay lugares sin cargo?<span class="t-plus"></span></button><div class="a">Sí. Una parte del cupo se reserva sin cargo con inscripción previa. También entran sin cargo los oradores, la prensa y los invitados institucionales.</div></div>
+<div class="e2-faq"><button type="button">¿Se transmite en vivo?<span class="t-plus"></span></button><div class="a">[Definir]. Si se transmite, conviene aclarar qué partes: por ejemplo el escenario principal sí y las mesas de trabajo no, porque son a puertas cerradas.</div></div>
+<div class="e2-faq"><button type="button">¿En qué se diferencia de los SUSU Conversations?<span class="t-plus"></span></button><div class="a">Los Conversations son encuentros privados de hasta quince personas, sin escenario. Sessions es el paso siguiente: abierto, con charlas y paneles, pero manteniendo el formato de mesa de trabajo en la segunda parte del día.</div></div>
+<div class="e2-faq"><button type="button">¿Cómo se compensa la huella del evento?<span class="t-plus"></span></button><div class="a">Como en todos los encuentros de SUSU, se mide la huella y se compensa con fondos propios, no de los sponsors. El resultado se publica con el número real y la organización elegida.</div></div>
+<div class="e2-faq"><button type="button">Quiero proponer un tema o un orador<span class="t-plus"></span></button><div class="a">Escribinos a info@susulatam.com. El programa lo define el consejo curador, pero las propuestas se leen todas.</div></div>
+</div>
+</div></section>
+
+</main>
+
+<footer>
+<div class="logo-mark footer"><span>SUSU</span><small>LATAM</small></div>
+<p>Construyendo el Sustainability Summit de Latinoamérica, un encuentro por vez.</p>
+<div class="footer-social">
+<a href="mailto:info@susulatam.com">info@susulatam.com</a>
+<a class="linkedin-link" href="https://www.linkedin.com/company/susulatam/" target="_blank" rel="noopener" aria-label="SUSU LATAM en LinkedIn"><span class="li-mark" aria-hidden="true">in</span>LinkedIn</a>
+</div>
+<div class="carbon-note"><p>Este sitio mide y compensa su huella digital.</p>
+<a class="carbon-badge" href="https://www.websitecarbon.com/website/susulatam-com/" target="_blank" rel="noopener">
+<span class="cb-grade">A+</span><span class="cb-text"><strong>&lt; 0,01 g de CO₂ por visita</strong><span>Energía sostenible</span></span></a></div>
+</footer>
+
+<script src="../../assets/nav.js" defer></script>
+<script src="../../assets/carbon.js" defer></script>
+<script>
+/* Acordeones de tracks y preguntas frecuentes. */
+document.querySelectorAll('.e2-track > button, .e2-faq > button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    b.parentElement.classList.toggle('open');
+  });
+});
+/* El primer eje arranca abierto, para que se vea de qué se trata sin tocar nada. */
+var first = document.querySelector('.e2-track');
+if (first) first.classList.add('open');
+</script>
+</body></html>

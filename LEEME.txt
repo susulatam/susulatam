@@ -1,41 +1,39 @@
-SUSU LATAM v26 — Badge de huella digital que se actualiza solo
-==============================================================
+SUSU LATAM — Página de prueba del segundo evento
+================================================
 
-EL PROBLEMA QUE RESUELVE
-1) El widget original decía "No Result" en las subpáginas porque consultaba
-   la API por la URL exacta de cada página, y solo la portada había sido
-   testeada.
-2) Un badge con la fecha escrita a mano quedaba viejo al mes siguiente.
+ARCHIVO
+  es/evento2test/index.html
 
-CÓMO FUNCIONA AHORA
-- El HTML trae el dato verificado escrito, así que el badge SIEMPRE se ve,
-  aunque la API no responda. Nunca más un "No Result".
-- Un script chiquito (assets/carbon.js) consulta la API preguntando por
-  susulatam.com — el dominio, no la página actual. Como el dominio sí está
-  testeado, la consulta funciona desde cualquier subpágina.
-- Si la API responde, actualiza el número y pone la fecha del día. La fecha
-  deja de envejecer sola.
-- El resultado se guarda una semana en el navegador del visitante, así no se
-  consulta la API en cada carga y no se choca contra su límite diario.
-- Si la API falla, está caída o devuelve algo raro, no toca nada: queda el
-  dato de respaldo. Probé los cinco escenarios posibles.
-- Si algún día el sitio se vuelve pesado (más de 0,1 g por visita), el
-  script esconde la nota "A+" en vez de mostrar una calificación que ya no
-  corresponde.
+Queda en: susulatam.com/es/evento2test/
+No está enlazada desde ningún menú y lleva noindex, igual que /es/empresas/.
+Se sube copiando la carpeta es/ sobre la del repo. No toca style.css,
+nav.css ni ninguna otra página.
 
-ARCHIVOS
-  assets/nav.css      ACTUALIZADO (estilos del badge)
-  assets/nav.js       igual
-  assets/carbon.js    NUEVO
-  es/ en/ pt/         16 páginas
+QUÉ TIENE (adaptado de lo que hace bien sustainablefinance.com.br)
+- Barra de anclas pegajosa arriba, para una página larga.
+- Hero con franja de datos: fecha, horario, lugar y cupo en bloques.
+- Sección de contexto con cuatro tarjetas.
+- Cuatro ejes temáticos desplegables, con 14 paneles en total.
+- Seis perfiles de audiencia.
+- Tres formas de participar, con la del medio destacada.
+- Bloque de sponsors con el mecanismo de entradas para invitar.
+- Consejo curador.
+- Preguntas frecuentes en acordeón.
 
-CÓMO SUBIRLO
-1. Copiá assets/ sobre tu carpeta assets/.
-2. Copiá es/ en/ pt/ sobre las del repo.
-3. Commit + push.
-No toca style.css ni la portada del mapa.
+LO QUE HAY QUE COMPLETAR (está entre corchetes)
+- Fecha, cupo real del domo y precios.
+- Nombres del consejo curador. Los dejé vacíos a propósito: hay que pedirle
+  el ok a cada persona antes de publicarla.
+- La pregunta sobre transmisión en vivo.
+- El link de compra de la entrada Profesional.
 
-NOTA SOBRE EL DATO DE RESPALDO
-La fecha escrita en el HTML es la del día en que generé estos archivos.
-Solo se ve si la API nunca respondió en el navegador del visitante. En la
-práctica, casi siempre se va a ver la fecha real de la consulta.
+DOS NOTAS INTERNAS DENTRO DE LA PÁGINA
+Hay dos recuadros verdes punteados con notas para vos. Borralos antes de
+publicar. Uno está en la sección de entradas y otro en la de curadores.
+
+SOBRE EL NOMBRE
+Le puse "SUSU Sessions" porque encaja con la escalera de formatos que ya
+está publicada en la página "Qué es SUSU": Conversations, Roundtables,
+Sessions, Summit. Un evento abierto con charlas y paneles es exactamente
+Sessions. Guardar "Summit" para el evento grande mantiene la promesa
+ordenada. Si preferís otro nombre, se cambia en un minuto.
