@@ -1,5 +1,5 @@
-/* SUSU LATAM — comportamiento de los menús desplegables de la barra superior.
-   Un solo panel abierto a la vez; se cierra al hacer clic afuera o con Escape. */
+/* SUSU LATAM — menús desplegables de la barra superior.
+   Un solo panel abierto a la vez; cierra con clic afuera o con Escape. */
 (function () {
   var menus = Array.prototype.slice.call(document.querySelectorAll('.ui-menu'));
 
@@ -25,7 +25,6 @@
   });
 
   document.addEventListener('click', function () { closeAll(null); });
-
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeAll(null);
   });

@@ -1,11 +1,9 @@
 /* ---------------------------------------------------------------
-   SUSU LATAM — barra superior y pie
+   SUSU LATAM — barra superior, LinkedIn y badge de huella digital
    Archivo aparte para no tocar style.css.
-   Cubre: selector de idioma con bandera, menú hamburguesa y LinkedIn.
    --------------------------------------------------------------- */
 
 .nav-right{display:flex;align-items:center;gap:10px}
-
 .ui-menu{position:relative}
 
 .ui-trigger{
@@ -18,12 +16,10 @@
 .ui-trigger:hover{border-color:rgba(255,255,255,.42);background:rgba(255,255,255,.05)}
 .ui-trigger:focus-visible{outline:2px solid #22C55E;outline-offset:2px}
 
-/* --- bandera del idioma activo --- */
 .lang-switch .flag{width:24px;height:16px;border-radius:3px;display:block;object-fit:cover}
 .lang-switch .chev{width:9px;height:9px;flex:none;transition:transform .2s ease}
 .ui-menu.open .chev{transform:rotate(180deg)}
 
-/* --- hamburguesa --- */
 .burger{display:flex;flex-direction:column;justify-content:center;gap:4px;width:18px;height:14px}
 .burger i{display:block;height:2px;width:100%;background:#fff;border-radius:2px;
   transition:transform .22s ease,opacity .18s ease}
@@ -31,7 +27,6 @@
 .ui-menu.open .burger i:nth-child(2){opacity:0}
 .ui-menu.open .burger i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
-/* --- paneles desplegables --- */
 .ui-panel{
   position:absolute;right:0;top:calc(100% + 9px);min-width:186px;
   background:#0F172A;border:1px solid rgba(255,255,255,.16);border-radius:13px;
@@ -40,19 +35,17 @@
 }
 .ui-menu.open .ui-panel{display:flex}
 .ui-panel a{
-  display:flex;align-items:center;gap:10px;
-  padding:10px 12px;border-radius:9px;
+  display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:9px;
   font-size:14px;font-weight:700;color:#fff;text-decoration:none;
   text-transform:none;letter-spacing:normal;white-space:nowrap;
 }
 .ui-panel a:hover{background:rgba(255,255,255,.07);color:#22C55E}
 .ui-panel a img{width:22px;height:15px;border-radius:3px;flex:none;object-fit:cover}
 
-/* --- LinkedIn en el pie --- */
-.footer-social{display:flex;align-items:center;gap:10px}
+/* --- LinkedIn --- */
+.footer-social{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .linkedin-link{
-  display:inline-flex;align-items:center;gap:9px;
-  padding:7px 13px 7px 8px;
+  display:inline-flex;align-items:center;gap:9px;padding:7px 13px 7px 8px;
   border:1px solid rgba(255,255,255,.18);border-radius:999px;
   color:#E2E8F0;text-decoration:none;font-size:13px;font-weight:700;
   transition:border-color .18s ease,color .18s ease,background .18s ease;
@@ -60,14 +53,36 @@
 .linkedin-link:hover{border-color:#22C55E;color:#22C55E;background:rgba(34,197,94,.08)}
 .linkedin-link .li-mark{
   display:inline-flex;align-items:center;justify-content:center;
-  width:22px;height:22px;border-radius:5px;
-  background:#E2E8F0;color:#0F172A;
+  width:22px;height:22px;border-radius:5px;background:#E2E8F0;color:#0F172A;
   font-size:12px;font-weight:800;line-height:1;letter-spacing:-.02em;
   transition:background .18s ease;
 }
 .linkedin-link:hover .li-mark{background:#22C55E}
 
+/* --- Badge de huella digital, propio (sin scripts de terceros) --- */
+.carbon-note{text-align:right}
+.carbon-note > p{margin:0 0 9px;font-size:12px;color:#94A3B8}
+.carbon-badge{
+  display:inline-flex;align-items:center;gap:11px;
+  padding:8px 15px 8px 9px;
+  border:1px solid rgba(34,197,94,.42);border-radius:12px;
+  background:rgba(34,197,94,.07);
+  text-decoration:none;text-align:left;
+  transition:border-color .18s ease,background .18s ease;
+}
+.carbon-badge:hover{border-color:#22C55E;background:rgba(34,197,94,.14)}
+.cb-grade{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:38px;height:32px;padding:0 7px;border-radius:8px;
+  background:#22C55E;color:#0F172A;
+  font-size:16px;font-weight:800;line-height:1;letter-spacing:-.02em;flex:none;
+}
+.cb-text{display:flex;flex-direction:column;gap:2px;line-height:1.25}
+.cb-text strong{font-size:13px;font-weight:800;color:#E2E8F0}
+.cb-text span{font-size:11px;color:#94A3B8}
+
 @media(max-width:850px){
   .nav-right{align-items:center;gap:8px}
+  .carbon-note{text-align:left}
   .footer-social{margin-top:4px}
 }
