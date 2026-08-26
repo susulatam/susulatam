@@ -1,43 +1,36 @@
-SUSU LATAM v28 — Página nueva: Formatos
-=======================================
+SUSU LATAM v29 — Formatos, sin el modelo de ingresos
+====================================================
 
-QUÉ ES
-Una página propia para la arquitectura de los cuatro formatos, tomada del
-documento que me pasaste. Queda en:
-  /es/formatos/   /en/formats/   /pt/formatos/
-y se suma al menú, como segundo ítem después de "Qué es SUSU".
+CAMBIO RESPECTO DE v28
+- Se eliminó la sección "Transparencia" con la tabla de qué se cobra y qué
+  no, en los tres idiomas.
+- Se eliminó el campo "quién paga" de los cuatro bloques de formato. Ahora
+  cada bloque muestra tres datos: personas, acceso y objetivo.
+- Se limpiaron también los estilos de esa tabla, para no dejar CSS muerto.
 
-POR QUÉ PÁGINA APARTE Y NO UNA SECCIÓN
-En "Qué es SUSU" los cuatro formatos siguen apareciendo como resumen, con
-un botón que lleva al detalle. La razón principal de la página propia es
-práctica: te da un link directo para mandarle a un sponsor o a un socio
-cuando pregunta cómo funciona el proyecto.
+QUÉ SIGUE ESTANDO
+La respuesta sobre costo se mantiene donde corresponde: en las preguntas
+frecuentes de "Qué es SUSU" está la pregunta "¿Hay que pagar?" con la
+respuesta de que los encuentros actuales no tienen costo para quien
+participa. Eso es lo que la gente realmente pregunta, y sigue contestado.
 
-QUÉ TIENE CADA FORMATO
-- Número, nombre y su función en dos palabras (descubrir, resolver,
-  aprender, reunir).
-- Una etiqueta de estado: Conversations aparece como "En curso" y los otros
-  como próximo paso, en preparación y el destino.
-- Una franja con cuatro datos: personas, acceso, objetivo y quién paga.
-- La lista de cómo funciona.
+POR QUÉ SE SACÓ
+- El modelo de ingresos publicado te saca margen en la conversación con un
+  sponsor, que llega con todo leído.
+- Anunciaba entradas para Sessions y Summit, dos formatos que todavía no
+  existen.
+- En Conversations, que "SUSU o un anfitrión" figurara como quien paga
+  podía hacer que un invitado se preguntara qué rol juega el sponsor en esa
+  mesa. Es el formato donde lo único que hay es confianza.
 
-LA TABLA "QUÉ SE COBRA Y QUÉ NO"
-La incluí porque es tu mejor carta de transparencia: dice sin vueltas que
-en Conversations y Roundtables el asistente no paga, y que en Sessions y
-Summit sí. Además responde por adelantado la pregunta que más frena a la
-gente, y refuerza la línea de credibilidad que ya sostiene el sitio.
-
-QUÉ DEJÉ AFUERA DEL DOCUMENTO, A PROPÓSITO
-- El análisis comparativo con Sustainable Finance 2026. Es material de
-  trabajo interno; publicar el benchmark de otro evento no suma.
-- El guion de "cómo contarlo en Conversations #1". Es tu machete, no
-  contenido de sitio.
-- La mención a una futura biblioteca digital o membresía, porque todavía no
-  existe y prefiero no anunciar nada que no esté.
+ESE MATERIAL VA A SERVIR DESPUÉS
+La tabla es buena, pero su lugar es un brochure de sponsors, donde podés
+adaptar el enfoque a cada interlocutor. Cuando lo quieras armar, avisame:
+ya tengo el contenido.
 
 ARCHIVOS
   assets/           og-image.png, nav.css, nav.js, carbon.js
-  es/ en/ pt/       19 páginas (16 de antes + las 3 de formatos)
+  es/ en/ pt/       19 páginas
 
 CÓMO SUBIRLO
 1. Copiá assets/ sobre tu carpeta assets/.
