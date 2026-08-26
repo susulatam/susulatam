@@ -1,39 +1,63 @@
-SUSU LATAM v29 — Formatos, sin el modelo de ingresos
-====================================================
-
-CAMBIO RESPECTO DE v28
-- Se eliminó la sección "Transparencia" con la tabla de qué se cobra y qué
-  no, en los tres idiomas.
-- Se eliminó el campo "quién paga" de los cuatro bloques de formato. Ahora
-  cada bloque muestra tres datos: personas, acceso y objetivo.
-- Se limpiaron también los estilos de esa tabla, para no dejar CSS muerto.
-
-QUÉ SIGUE ESTANDO
-La respuesta sobre costo se mantiene donde corresponde: en las preguntas
-frecuentes de "Qué es SUSU" está la pregunta "¿Hay que pagar?" con la
-respuesta de que los encuentros actuales no tienen costo para quien
-participa. Eso es lo que la gente realmente pregunta, y sigue contestado.
-
-POR QUÉ SE SACÓ
-- El modelo de ingresos publicado te saca margen en la conversación con un
-  sponsor, que llega con todo leído.
-- Anunciaba entradas para Sessions y Summit, dos formatos que todavía no
-  existen.
-- En Conversations, que "SUSU o un anfitrión" figurara como quien paga
-  podía hacer que un invitado se preguntara qué rol juega el sponsor en esa
-  mesa. Es el formato donde lo único que hay es confianza.
-
-ESE MATERIAL VA A SERVIR DESPUÉS
-La tabla es buena, pero su lugar es un brochure de sponsors, donde podés
-adaptar el enfoque a cada interlocutor. Cuando lo quieras armar, avisame:
-ya tengo el contenido.
+SUSU LATAM — Dos secciones nuevas, sin publicar
+===============================================
 
 ARCHIVOS
-  assets/           og-image.png, nav.css, nav.js, carbon.js
-  es/ en/ pt/       19 páginas
+  es/mascotas/index.html          susulatam.com/es/mascotas/
+  es/impacto-social/index.html    susulatam.com/es/impacto-social/
 
-CÓMO SUBIRLO
-1. Copiá assets/ sobre tu carpeta assets/.
-2. Copiá es/ en/ pt/ sobre las del repo.
-3. Commit + push.
-No toca style.css, ni index.html, ni assets/map-latam.svg.
+Las dos llevan noindex y la franja verde de "borrador interno". No están
+enlazadas desde ningún menú: solo se llega escribiendo la URL. Igual que
+/es/empresas/ y /es/evento2test/.
+
+Se suben copiando la carpeta es/ sobre la del repo. No tocan ningún otro
+archivo.
+
+
+1. LA PANDILLA (mascotas)
+-------------------------
+La idea: un animal nativo por edición, no una mascota fija para SUSU.
+Así la colección se acumula y a las diez ediciones tenés diez especies de
+diez lugares, que cuentan por dónde pasó la comunidad.
+
+Mecánica: SUSU propone una terna curada, vota la comunidad, el animal
+acompaña esa edición, y la compensación de SUSU Impact de esa edición va a
+un proyecto que proteja su hábitat.
+
+Ese último paso es el que hace que la idea valga. Sin él es decoración.
+
+Para Buenos Aires #1 propuse tres del Delta del Paraná: carpincho, ciervo
+de los pantanos y lobito de río, cada uno con sus pros y contras. Mi voto
+está anotado en la página, con el razonamiento.
+
+Falta definir: estilo de ilustración, verificar estado de conservación de
+cada especie con fuente citable, dónde se vota, y con qué organización se
+hace la compensación.
+
+
+2. UNA SILLA MÁS (impacto social)
+---------------------------------
+El principio: SUSU no tiene plata, tiene acceso. Una donación tuya hoy
+sería simbólica; en cambio, quince personas que deciden sentadas una hora
+es algo que una organización social no consigue ni pagando.
+
+Mecánica: un lugar de la mesa por edición para una organización social o
+ambiental, que llega con un pedido concreto (un contacto, una gestión, un
+servicio, materiales). La mesa le dedica quince minutos de agenda. A los
+treinta días se hace seguimiento y se publica el resultado.
+
+La página incluye una sección "lo que no vamos a hacer" que es, para mí, la
+parte más importante: no usar a personas vulnerables como contenido, no
+anunciar antes de hacer, no pedir agradecimientos públicos, y publicar
+también lo que no funcionó.
+
+Falta definir: la primera organización, quién hace el seguimiento a los
+treinta días, y si el bloque de quince minutos entra en la agenda.
+
+
+UNA OBSERVACIÓN
+---------------
+Las dos secciones se tocan en un punto: la compensación de SUSU Impact.
+En la pandilla financia el hábitat del animal de esa edición; en impacto
+social podría financiar un proyecto con componente comunitario. Conviene
+decidir si es la misma plata o son dos cosas separadas, antes de publicar
+cualquiera de las dos.
