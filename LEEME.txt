@@ -1,61 +1,46 @@
-SUSU LATAM v27 — Mejoras a partir de sustainablefinance.com.br
-==============================================================
+SUSU LATAM v28 — Página nueva: Formatos
+=======================================
 
-LO MÁS IMPORTANTE: EL SITIO NO TENÍA ETIQUETAS OPEN GRAPH
-Hasta ahora, compartir cualquier link de susulatam.com en LinkedIn, WhatsApp
-o Slack mostraba un link pelado: sin imagen, sin título, sin descripción.
-Para un proyecto que crece compartiendo links en LinkedIn, era la pérdida
-más grande y la más fácil de arreglar.
+QUÉ ES
+Una página propia para la arquitectura de los cuatro formatos, tomada del
+documento que me pasaste. Queda en:
+  /es/formatos/   /en/formats/   /pt/formatos/
+y se suma al menú, como segundo ítem después de "Qué es SUSU".
 
-Ahora las 17 páginas tienen:
-- Imagen social (assets/og-image.png, 1200x630) con la marca y el mapa
-- Título y descripción propios por página
-- canonical y alternates por idioma (le dice a Google que /es/ /en/ /pt/
-  son la misma página en tres idiomas, no contenido duplicado)
-- Twitter card
+POR QUÉ PÁGINA APARTE Y NO UNA SECCIÓN
+En "Qué es SUSU" los cuatro formatos siguen apareciendo como resumen, con
+un botón que lleva al detalle. La razón principal de la página propia es
+práctica: te da un link directo para mandarle a un sponsor o a un socio
+cuando pregunta cómo funciona el proyecto.
 
-Después de subirlo conviene forzar el refresco del caché en:
-  LinkedIn:  https://www.linkedin.com/post-inspector/
-  Facebook / WhatsApp: https://developers.facebook.com/tools/debug/
+QUÉ TIENE CADA FORMATO
+- Número, nombre y su función en dos palabras (descubrir, resolver,
+  aprender, reunir).
+- Una etiqueta de estado: Conversations aparece como "En curso" y los otros
+  como próximo paso, en preparación y el destino.
+- Una franja con cuatro datos: personas, acceso, objetivo y quién paga.
+- La lista de cómo funciona.
 
-LAS OTRAS MEJORAS
+LA TABLA "QUÉ SE COBRA Y QUÉ NO"
+La incluí porque es tu mejor carta de transparencia: dice sin vueltas que
+en Conversations y Roundtables el asistente no paga, y que en Sessions y
+Summit sí. Además responde por adelantado la pregunta que más frena a la
+gente, y refuerza la línea de credibilidad que ya sostiene el sitio.
 
-1. Barra de anclas en "Qué es SUSU"
-   Es la página más larga del sitio. Ahora tiene una barra pegajosa arriba
-   con: Por qué LATAM · El camino · Para quién es · El Summit · Preguntas.
-
-2. Sección "Para quién es" (nueva)
-   Seis perfiles de audiencia. Sirve para que cada visitante se
-   autoidentifique, y de paso baja las consultas de gente que no encaja.
-
-3. Preguntas frecuentes (nueva)
-   Seis preguntas en acordeón, respondiendo lo que hoy queda sin contestar:
-   si se puede participar, si hay que pagar, cuándo es el Summit, por qué
-   solo Buenos Aires, cómo suma una empresa y qué es SUSU Impact.
-   Responder "¿hay que pagar?" antes de que lo pregunten evita perder gente
-   que asume que sí.
-
-4. Datos estructurados de evento
-   Las páginas de eventos ahora declaran el encuentro en formato
-   schema.org: fecha, horario, lugar y organizador. Es lo que permite que
-   Google lo muestre como evento y no como una página cualquiera.
+QUÉ DEJÉ AFUERA DEL DOCUMENTO, A PROPÓSITO
+- El análisis comparativo con Sustainable Finance 2026. Es material de
+  trabajo interno; publicar el benchmark de otro evento no suma.
+- El guion de "cómo contarlo en Conversations #1". Es tu machete, no
+  contenido de sitio.
+- La mención a una futura biblioteca digital o membresía, porque todavía no
+  existe y prefiero no anunciar nada que no esté.
 
 ARCHIVOS
-  index.html            portada, ahora con etiquetas sociales
-  assets/og-image.png   NUEVO — imagen para compartir
-  assets/nav.css        igual que v26
-  assets/nav.js         igual
-  assets/carbon.js      igual
-  es/ en/ pt/           16 páginas
+  assets/           og-image.png, nav.css, nav.js, carbon.js
+  es/ en/ pt/       19 páginas (16 de antes + las 3 de formatos)
 
 CÓMO SUBIRLO
 1. Copiá assets/ sobre tu carpeta assets/.
-2. Copiá index.html a la raíz.
-3. Copiá es/ en/ pt/ sobre las del repo.
-4. Commit + push.
-No toca style.css ni assets/map-latam.svg.
-
-LO QUE NO HICE TODAVÍA
-El consejo curador. Es la mejor idea de la página que me pasaste, pero hay
-que pedirle el ok a cada participante de Conversations antes de publicar su
-nombre. Cuando los tengas, lo armo.
+2. Copiá es/ en/ pt/ sobre las del repo.
+3. Commit + push.
+No toca style.css, ni index.html, ni assets/map-latam.svg.
