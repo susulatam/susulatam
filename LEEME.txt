@@ -1,38 +1,35 @@
-SUSU LATAM v30 — Ediciones anteriores
-=====================================
+SUSU LATAM v31 — Ajustes a Ediciones anteriores
+===============================================
 
-EL NOMBRE
-Elegí "Ediciones anteriores" en vez de "Eventos pasados". La diferencia no
-es menor: "pasados" suena a algo que terminó, "ediciones" suena a una serie
-que continúa. Y es exactamente el relato del proyecto.
-  /es/ediciones/    /en/past-editions/    /pt/edicoes/
+LOS TRES CAMBIOS
 
-QUÉ CAMBIÓ
-- EVENTOS quedó solo con lo que viene: Conversations #2 (ahora marcado como
-  "próximo encuentro") y el Summit. Se sacó la tarjeta del 2 de septiembre.
-- Nueva sección con la crónica del primer encuentro, los ocho participantes
-  con nombre y empresa, y las cinco fotos.
-- Las dos páginas se enlazan entre sí en los dos sentidos.
-- Los datos estructurados del evento del 2/9 se movieron de "Eventos" a
-  "Ediciones anteriores", que es donde corresponden ahora.
-- Nuevo ítem en el menú, en los tres idiomas.
+1. Se sacó la mención a Rosario, en los tres idiomas.
 
-SOBRE LAS FOTOS Y LA HUELLA
-Las cinco fotos originales pesaban 6,3 MB. Así como estaban, habrían hundido
-la calificación A+ de Website Carbon, lo cual sería bastante incoherente en
-un proyecto que habla de huella.
+2. Se sacó el listado de participantes completo, en los tres idiomas.
+   La página ahora cuenta cómo estuvo el encuentro sin nombrar a nadie.
+   Los datos de arriba (8 participantes, 6 industrias) se mantienen.
 
-Las redimensioné y recomprimí: quedaron en 863 KB en total, un 87% menos, sin
-diferencia visible. Además llevan carga diferida y dimensiones declaradas,
-así que la página no salta mientras carga.
+3. Las cinco fotos quedaron en una grilla pareja, todas del mismo tamaño.
+   Al tocar cualquiera se abre en grande sobre un fondo oscuro.
+   Se cierra de tres formas: con la X de arriba a la derecha, con la tecla
+   Escape, o tocando fuera de la foto.
+   Funciona igual en los tres idiomas, con los textos traducidos.
 
-Aun así, esta va a ser la página más pesada del sitio. Es inevitable y vale
-la pena. El badge mide el dominio, así que la calificación general no cambia.
+UN DATO QUE CORREGÍ
+Decía "7 industrias" y en realidad son 6: energía, agro y carbono,
+ingeniería, química, consultoría en sustentabilidad y software. Los ocho
+participantes vinieron de siete organizaciones (TERRACOTA aportó dos
+personas) pero las industrias representadas son seis.
 
-MENCIÓN A ROSARIO
-La incluí al final de la lista de participantes, aclarando que no pudo
-asistir por un tema de salud. Me pareció mejor nombrarla que omitirla: es
-parte de esta primera edición y lo va a ver.
+Ojo con esto: en el texto que te pasé para LinkedIn también decía siete.
+Si todavía no lo publicaste, cambialo.
+
+DETALLES DE LA AMPLIACIÓN DE FOTOS
+- Las miniaturas son botones reales, así que funcionan con teclado.
+- Al abrir, el foco pasa al botón de cerrar; al cerrar, vuelve a la foto
+  desde donde saliste. Eso hace que se pueda recorrer sin mouse.
+- Mientras está abierta, la página de atrás no se desplaza.
+- El cursor cambia a lupa al pasar por encima, para que se note que amplía.
 
 ARCHIVOS
   assets/fotos/     5 fotos optimizadas
@@ -40,7 +37,7 @@ ARCHIVOS
   es/ en/ pt/       22 páginas
 
 CÓMO SUBIRLO
-1. Copiá assets/ sobre tu carpeta assets/ (incluye la carpeta fotos/ nueva).
+1. Copiá assets/ sobre tu carpeta assets/.
 2. Copiá es/ en/ pt/ sobre las del repo.
 3. Commit + push.
 No toca style.css, ni index.html, ni assets/map-latam.svg.
