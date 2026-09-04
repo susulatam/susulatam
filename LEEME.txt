@@ -1,43 +1,99 @@
-SUSU LATAM v31 — Ajustes a Ediciones anteriores
-===============================================
+SUSU LATAM — Área de miembros (PROTOTIPO)
+=========================================
 
-LOS TRES CAMBIOS
+DÓNDE QUEDA
+  es/miembros/index.html   →   susulatam.com/es/miembros/
 
-1. Se sacó la mención a Rosario, en los tres idiomas.
+Lleva noindex y la franja de prototipo. No está enlazada desde ningún menú.
+Se sube copiando la carpeta es/ sobre la del repo.
 
-2. Se sacó el listado de participantes completo, en los tres idiomas.
-   La página ahora cuenta cómo estuvo el encuentro sin nombrar a nadie.
-   Los datos de arriba (8 participantes, 6 industrias) se mantienen.
 
-3. Las cinco fotos quedaron en una grilla pareja, todas del mismo tamaño.
-   Al tocar cualquiera se abre en grande sobre un fondo oscuro.
-   Se cierra de tres formas: con la X de arriba a la derecha, con la tecla
-   Escape, o tocando fuera de la foto.
-   Funciona igual en los tres idiomas, con los textos traducidos.
+LO PRIMERO Y MÁS IMPORTANTE
+---------------------------
+ESTO ES UN PROTOTIPO, NO UN SISTEMA REAL.
 
-UN DATO QUE CORREGÍ
-Decía "7 industrias" y en realidad son 6: energía, agro y carbono,
-ingeniería, química, consultoría en sustentabilidad y software. Los ocho
-participantes vinieron de siete organizaciones (TERRACOTA aportó dos
-personas) pero las industrias representadas son seis.
+Tu sitio está en GitHub Pages, que es alojamiento estático: no hay servidor
+ni base de datos. Eso implica dos cosas:
 
-Ojo con esto: en el texto que te pasé para LinkedIn también decía siete.
-Si todavía no lo publicaste, cambialo.
+1. La contraseña NO protege nada de verdad. Todo el código corre en el
+   navegador del visitante y cualquiera puede leerlo.
 
-DETALLES DE LA AMPLIACIÓN DE FOTOS
-- Las miniaturas son botones reales, así que funcionan con teclado.
-- Al abrir, el foco pasa al botón de cerrar; al cerrar, vuelve a la foto
-  desde donde saliste. Eso hace que se pueda recorrer sin mouse.
-- Mientras está abierta, la página de atrás no se desplaza.
-- El cursor cambia a lupa al pasar por encima, para que se note que amplía.
+2. Los datos del registro NO te llegan. Se guardan solo en el navegador de
+   esa persona. Si abre desde otro dispositivo, no existe su cuenta.
 
-ARCHIVOS
-  assets/fotos/     5 fotos optimizadas
-  assets/           og-image.png, nav.css, nav.js, carbon.js
-  es/ en/ pt/       22 páginas
+Sirve para evaluar la experiencia y mostrársela a alguien. No para publicarlo
+y empezar a pedir datos reales.
 
-CÓMO SUBIRLO
-1. Copiá assets/ sobre tu carpeta assets/.
-2. Copiá es/ en/ pt/ sobre las del repo.
-3. Commit + push.
-No toca style.css, ni index.html, ni assets/map-latam.svg.
+
+QUÉ HACE FALTA PARA QUE SEA REAL
+--------------------------------
+Un servicio que guarde los datos y maneje las cuentas. La opción más simple
+para tu caso es Supabase: tiene plan gratuito generoso, hace autenticación de
+verdad (con recuperación de contraseña incluida) y base de datos.
+
+El trabajo sería:
+  1. Crear un proyecto en Supabase (15 minutos, gratis).
+  2. Crear la tabla de miembros.
+  3. Reemplazar en esta página las funciones de guardado por llamadas a
+     Supabase. Es media hora de trabajo.
+
+El diseño y todos los textos quedan igual. Avisame cuando quieras y lo hago.
+
+Alternativa intermedia sin backend: dejar solo el formulario de registro
+(sin login) enviando a un Google Form o a Formspree. Vos recibís los datos y
+mandás la credencial por mail a mano. Menos elegante, pero funciona hoy.
+
+
+NÚMEROS DE SOCIO
+----------------
+Arrancan en 1050 y suben de a uno. Dejé libre el rango 1000-1007, que es el
+de las credenciales que ya imprimiste para el primer encuentro.
+
+Una aclaración: que el primer socio sea el 1050 es una convención habitual,
+como pasa con los números de factura. Pero cuidado con leerlo como si fueran
+1050 miembros: si en algún momento decís esa cifra en público, sería falso.
+
+
+CÓDIGOS DE PRUEBA
+-----------------
+  SUSU-CONV1      Founding Member del primer encuentro
+  SUSU-FUNDADOR   Miembro fundador
+  SUSU-ALIADO     Organización aliada
+
+Cualquier otro devuelve error. Los códigos y sus beneficios se editan en el
+bloque BENEFICIOS, arriba del script.
+
+
+QUÉ VE UN MIEMBRO AL ENTRAR
+---------------------------
+- Su credencial digital con nombre, empresa, número y fecha de alta.
+- Ediciones anteriores (enlaza a la página que ya existe).
+- Directorio de miembros — marcado como próximamente.
+- Proponer un invitado.
+- Prioridad de inscripción — próximamente.
+- SUSU Impact.
+- Biblioteca — próximamente.
+- El canje de códigos, con los beneficios que va activando.
+
+Dejé cuatro cosas como "próximamente" a propósito: es mejor mostrar hacia
+dónde va que llenarlo de secciones vacías.
+
+
+LA FUNCIÓN QUE MÁS VALOR TIENE
+------------------------------
+El directorio de miembros. Que alguien de Carrefour pueda encontrar a alguien
+de Movistar dentro de la comunidad es lo único que un miembro no consigue por
+su cuenta, y es la razón real para volver a entrar.
+
+Dos condiciones para que funcione: que cada uno elija si quiere aparecer y con
+qué datos, y que no se publique ningún contacto sin autorización explícita.
+Sin eso, en vez de una comunidad tenés una base de datos filtrada.
+
+
+ANTES DE PUBLICARLO
+-------------------
+- Borrar el recuadro verde de nota interna que está al final del panel.
+- Borrar la franja de prototipo de arriba.
+- Resolver el backend (ver más arriba).
+- Y si vas a guardar celulares y datos de contacto, conviene una línea sobre
+  qué hacés con esos datos. Es lo mínimo, y da confianza.

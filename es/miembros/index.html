@@ -1,0 +1,368 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miembros · SUSU LATAM</title>
+<meta name="description" content="Área de miembros de SUSU LATAM.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../assets/nav.css">
+<style>
+/* Área de miembros. Estilos propios, no tocan style.css ni nav.css. */
+.draft-flag{background:#22C55E;color:#0F172A;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:10px 16px}
+.mb-wrap{width:min(1080px,92%);margin:0 auto}
+.mb-sec{padding:60px 0}
+.mb-eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#22C55E;font-weight:800;margin:0 0 14px}
+.mb-h2{font-size:clamp(24px,3.4vw,36px);line-height:1.15;margin:0 0 14px;color:#fff}
+.mb-lead{font-size:16px;line-height:1.65;color:#94A3B8;max-width:66ch;margin:0 0 30px}
+
+/* --- formularios --- */
+.mb-card{border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:34px;max-width:520px}
+.mb-card h3{font-size:23px;margin:0 0 6px;color:#fff}
+.mb-card > p{font-size:14px;color:#94A3B8;margin:0 0 26px;line-height:1.6}
+.mb-field{margin:0 0 16px}
+.mb-field label{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#94A3B8;font-weight:800;margin:0 0 7px}
+.mb-field input,.mb-field select{width:100%;box-sizing:border-box;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.18);border-radius:11px;padding:13px 15px;color:#fff;font-family:inherit;font-size:15px}
+.mb-field input:focus,.mb-field select:focus{outline:none;border-color:#22C55E;background:rgba(34,197,94,.06)}
+.mb-field input::placeholder{color:#5B6B84}
+.mb-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mb-btn{width:100%;padding:15px;border:0;border-radius:11px;background:#22C55E;color:#0F172A;font-family:inherit;font-size:16px;font-weight:800;cursor:pointer;transition:opacity .18s ease}
+.mb-btn:hover{opacity:.88}
+.mb-btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.24);color:#fff}
+.mb-btn.ghost:hover{border-color:#22C55E;color:#22C55E}
+.mb-switch{margin:20px 0 0;font-size:14px;color:#94A3B8;text-align:center}
+.mb-switch a{color:#22C55E;text-decoration:none;font-weight:700;cursor:pointer}
+.mb-error{font-size:13px;color:#F87171;margin:0 0 16px;display:none}
+.mb-error.on{display:block}
+
+/* --- credencial --- */
+.mb-pass{position:relative;border-radius:20px;padding:30px 32px;background:linear-gradient(140deg,#132038 0%,#0F172A 60%);border:1px solid rgba(34,197,94,.35);overflow:hidden;max-width:520px}
+.mb-pass::after{content:"";position:absolute;right:-70px;top:-70px;width:230px;height:230px;border-radius:50%;background:rgba(34,197,94,.07)}
+.mb-pass .tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#22C55E;font-weight:800}
+.mb-pass .who{font-size:27px;font-weight:800;color:#fff;margin:12px 0 3px;line-height:1.2}
+.mb-pass .org{font-size:15px;color:#94A3B8;margin:0 0 26px}
+.mb-pass .num{font-family:ui-monospace,"Courier New",monospace;font-size:20px;font-weight:700;color:#fff;letter-spacing:.04em}
+.mb-pass .since{font-size:12px;color:#7E8CA3;margin-top:6px}
+
+/* --- panel --- */
+.mb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:30px 0 0}
+.mb-tile{border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:9px}
+.mb-tile h4{font-size:17px;margin:0;color:#fff}
+.mb-tile p{font-size:14px;line-height:1.6;color:#94A3B8;margin:0}
+.mb-tile .soon{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#22C55E;font-weight:800;border:1px solid rgba(34,197,94,.4);border-radius:999px;padding:4px 10px;align-self:flex-start}
+.mb-tile a{font-size:14px;font-weight:700;color:#22C55E;text-decoration:none;margin-top:2px}
+
+/* --- beneficios / código --- */
+.mb-code{display:flex;gap:10px;margin:16px 0 0;flex-wrap:wrap}
+.mb-code input{flex:1;min-width:180px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.18);border-radius:11px;padding:13px 15px;color:#fff;font-family:ui-monospace,"Courier New",monospace;font-size:15px;text-transform:uppercase}
+.mb-code button{padding:13px 24px;border:0;border-radius:11px;background:#22C55E;color:#0F172A;font-family:inherit;font-weight:800;cursor:pointer}
+.mb-msg{font-size:14px;margin:14px 0 0;line-height:1.6;display:none}
+.mb-msg.on{display:block}
+.mb-msg.ok{color:#22C55E}
+.mb-msg.bad{color:#F87171}
+.mb-unlocked{border:1px solid rgba(34,197,94,.4);background:rgba(34,197,94,.06);border-radius:14px;padding:20px 22px;margin:16px 0 0}
+.mb-unlocked strong{display:block;color:#fff;font-size:16px;margin-bottom:5px}
+.mb-unlocked span{font-size:14px;color:#94A3B8}
+
+.mb-note{border:1px dashed rgba(34,197,94,.45);border-radius:14px;padding:22px 24px;background:rgba(34,197,94,.05);margin:36px 0 0}
+.mb-note p{margin:0 0 10px;font-size:14px;line-height:1.65;color:#CBD5E1}
+.mb-note p:last-child{margin:0}
+.mb-note strong{color:#22C55E}
+.hidden{display:none}
+@media(max-width:600px){.mb-row{grid-template-columns:1fr}.mb-card{padding:26px}}
+</style>
+</head><body>
+<div class="draft-flag">Prototipo interno · no está enlazado ni publicado</div>
+
+<header class="nav"><a class="logo-mark" href="../../"><span>SUSU</span><small>LATAM</small></a>
+<div class="nav-right">
+<div class="ui-menu lang-switch"><button class="ui-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Cambiar idioma"><img class="flag" src="../../assets/flags/es.svg" alt="Español"><svg class="chev" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<div class="ui-panel"><a href="../../en/"><img src="../../assets/flags/gb.svg" alt="">English</a><a href="../../pt/"><img src="../../assets/flags/br.svg" alt="">Português</a></div></div>
+<div class="ui-menu main-menu"><button class="ui-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Abrir menú"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
+<div class="ui-panel"><a href="../que-es/">Qué es SUSU</a><a href="../formatos/">Formatos</a><a href="../eventos/">Eventos</a><a href="../ediciones/">Ediciones anteriores</a><a href="../sponsors/">Sumate como sponsor</a><a href="../impact/">SUSU Impact</a></div></div>
+</div></header>
+
+<main>
+
+<!-- ============ ENTRADA: registro / ingreso ============ -->
+<section id="v-auth">
+  <div class="hero"><p class="eyebrow">Área de miembros</p>
+    <h1>La comunidad, del otro lado.</h1>
+    <p class="subtitle">Tu credencial, los materiales de cada encuentro, los beneficios de la red y prioridad para las próximas mesas.</p>
+  </div>
+
+  <div class="mb-wrap mb-sec">
+
+    <!-- registro -->
+    <div class="mb-card" id="c-registro">
+      <h3>Crear cuenta</h3>
+      <p>Si participaste de un encuentro de SUSU, esta es tu puerta de entrada.</p>
+      <p class="mb-error" id="err-reg"></p>
+      <div class="mb-row">
+        <div class="mb-field"><label for="r-nombre">Nombre</label><input id="r-nombre" type="text" placeholder="Alejandra" autocomplete="given-name"></div>
+        <div class="mb-field"><label for="r-apellido">Apellido</label><input id="r-apellido" type="text" placeholder="Torras" autocomplete="family-name"></div>
+      </div>
+      <div class="mb-field"><label for="r-email">Email</label><input id="r-email" type="email" placeholder="nombre@empresa.com" autocomplete="email"></div>
+      <div class="mb-field"><label for="r-cel">Celular</label><input id="r-cel" type="tel" placeholder="+54 9 11 ..." autocomplete="tel"></div>
+      <div class="mb-row">
+        <div class="mb-field"><label for="r-empresa">Empresa</label><input id="r-empresa" type="text" placeholder="Coto" autocomplete="organization"></div>
+        <div class="mb-field"><label for="r-cargo">Cargo</label><input id="r-cargo" type="text" placeholder="Gerenta de Sustentabilidad" autocomplete="organization-title"></div>
+      </div>
+      <div class="mb-field"><label for="r-pass">Contraseña</label><input id="r-pass" type="password" placeholder="Mínimo 8 caracteres" autocomplete="new-password"></div>
+      <button class="mb-btn" id="btn-registrar">Crear mi cuenta</button>
+      <p class="mb-switch">¿Ya tenés cuenta? <a id="ir-login">Ingresar</a></p>
+    </div>
+
+    <!-- ingreso -->
+    <div class="mb-card hidden" id="c-login">
+      <h3>Ingresar</h3>
+      <p>Bienvenido de vuelta.</p>
+      <p class="mb-error" id="err-log"></p>
+      <div class="mb-field"><label for="l-email">Email</label><input id="l-email" type="email" placeholder="nombre@empresa.com" autocomplete="email"></div>
+      <div class="mb-field"><label for="l-pass">Contraseña</label><input id="l-pass" type="password" autocomplete="current-password"></div>
+      <button class="mb-btn" id="btn-login">Entrar</button>
+      <p class="mb-switch">¿Todavía no tenés cuenta? <a id="ir-registro">Crear una</a></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ PANEL ============ -->
+<section id="v-panel" class="hidden">
+  <div class="hero" style="min-height:auto;padding:60px 0 20px">
+    <p class="eyebrow">Área de miembros</p>
+    <h1 id="saludo">Hola.</h1>
+  </div>
+
+  <div class="mb-wrap mb-sec" style="padding-top:10px">
+
+    <!-- credencial -->
+    <div class="mb-pass">
+      <span class="tag">Founding Member</span>
+      <p class="who" id="p-nombre">—</p>
+      <p class="org" id="p-org">—</p>
+      <p class="num" id="p-num">—</p>
+      <p class="since" id="p-desde">—</p>
+    </div>
+
+    <!-- accesos -->
+    <div class="mb-grid">
+      <div class="mb-tile">
+        <h4>Ediciones anteriores</h4>
+        <p>Las fotos completas, los temas que salieron y los apuntes de cada encuentro.</p>
+        <a href="../ediciones/">Ver ediciones →</a>
+      </div>
+      <div class="mb-tile">
+        <span class="soon">Próximamente</span>
+        <h4>Directorio de miembros</h4>
+        <p>Quién es quién en la comunidad, por industria. Con contacto solo si la persona lo autoriza.</p>
+      </div>
+      <div class="mb-tile">
+        <h4>Proponer un invitado</h4>
+        <p>La curaduría es por industria. Si conocés a alguien de un sector que falta, contanos.</p>
+        <a href="mailto:info@susulatam.com?subject=Propongo%20un%20invitado">Escribirnos →</a>
+      </div>
+      <div class="mb-tile">
+        <span class="soon">Próximamente</span>
+        <h4>Prioridad de inscripción</h4>
+        <p>Los miembros se enteran primero y tienen lugar reservado antes de que se abra al resto.</p>
+      </div>
+      <div class="mb-tile">
+        <h4>SUSU Impact</h4>
+        <p>Cuánto se compensó de cada encuentro y a través de qué organización.</p>
+        <a href="../impact/">Ver el compromiso →</a>
+      </div>
+      <div class="mb-tile">
+        <span class="soon">Próximamente</span>
+        <h4>Biblioteca</h4>
+        <p>Materiales, guías y lo que se produzca en los Roundtables.</p>
+      </div>
+    </div>
+
+    <!-- beneficios -->
+    <div class="mb-sec" style="padding-bottom:0">
+      <p class="mb-eyebrow">Beneficios</p>
+      <h2 class="mb-h2">¿Tenés un código?</h2>
+      <p class="mb-lead">Si participaste de un encuentro o sos parte de una organización aliada, te dimos un código. Cargalo acá para activar tu beneficio.</p>
+      <div class="mb-code">
+        <input id="codigo" type="text" placeholder="SUSU-XXXX" maxlength="24">
+        <button id="btn-codigo">Canjear</button>
+      </div>
+      <p class="mb-msg" id="msg-codigo"></p>
+      <div id="lista-beneficios"></div>
+    </div>
+
+    <div style="margin:44px 0 0">
+      <button class="mb-btn ghost" id="btn-salir" style="max-width:220px">Cerrar sesión</button>
+    </div>
+
+    <div class="mb-note">
+      <p><strong>Nota interna — no va en la versión publicada.</strong></p>
+      <p>Códigos de prueba cargados: <strong>SUSU-CONV1</strong> (para quienes fueron al primer encuentro), <strong>SUSU-FUNDADOR</strong> y <strong>SUSU-ALIADO</strong>. Cualquier otro da error.</p>
+      <p>Los datos de esta demo se guardan solo en tu navegador. Ver el archivo LEEME para saber qué falta para que sea real.</p>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer><div class="logo-mark footer"><span>SUSU</span><small>LATAM</small></div>
+<p>Construyendo el Sustainability Summit de Latinoamérica, un encuentro por vez.</p>
+<div class="footer-social"><a href="mailto:info@susulatam.com">info@susulatam.com</a>
+<a class="linkedin-link" href="https://www.linkedin.com/company/susulatam/" target="_blank" rel="noopener" aria-label="SUSU LATAM en LinkedIn"><span class="li-mark" aria-hidden="true">in</span>LinkedIn</a></div>
+</footer>
+
+<script src="../../assets/nav.js" defer></script>
+<script>
+/* ------------------------------------------------------------------
+   PROTOTIPO. Todo esto corre en el navegador del visitante.
+   No hay servidor detrás: los datos no salen de este dispositivo y
+   la contraseña no está protegida de verdad. Sirve para evaluar la
+   experiencia, no para usarlo en producción. Ver LEEME.
+   ------------------------------------------------------------------ */
+(function () {
+  var KEY = "susu-miembros-demo";
+  var SESION = "susu-sesion-demo";
+  var PRIMER_NUMERO = 1050;   // los del primer encuentro tienen 1000-1007
+
+  var BENEFICIOS = {
+    "SUSU-CONV1": { titulo: "Founding Member · Conversations #1",
+                    detalle: "Prioridad permanente de invitación y acceso a todos los materiales de la comunidad." },
+    "SUSU-FUNDADOR": { titulo: "Miembro fundador",
+                       detalle: "Reconocimiento en la página de la comunidad y lugar reservado en las próximas mesas." },
+    "SUSU-ALIADO": { titulo: "Organización aliada",
+                     detalle: "Dos lugares por edición para tu equipo y presencia en el material del encuentro." }
+  };
+
+  function leer(k, def) { try { return JSON.parse(localStorage.getItem(k)) || def; } catch (e) { return def; } }
+  function guardar(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  function $(id) { return document.getElementById(id); }
+
+  function error(el, txt) { el.textContent = txt; el.classList.add("on"); }
+  function limpiar(el) { el.classList.remove("on"); }
+
+  /* ---------- alternar entre registro e ingreso ---------- */
+  $("ir-login").addEventListener("click", function () {
+    $("c-registro").classList.add("hidden"); $("c-login").classList.remove("hidden");
+  });
+  $("ir-registro").addEventListener("click", function () {
+    $("c-login").classList.add("hidden"); $("c-registro").classList.remove("hidden");
+  });
+
+  /* ---------- registro ---------- */
+  $("btn-registrar").addEventListener("click", function () {
+    limpiar($("err-reg"));
+    var d = {
+      nombre: $("r-nombre").value.trim(),
+      apellido: $("r-apellido").value.trim(),
+      email: $("r-email").value.trim().toLowerCase(),
+      cel: $("r-cel").value.trim(),
+      empresa: $("r-empresa").value.trim(),
+      cargo: $("r-cargo").value.trim(),
+      pass: $("r-pass").value
+    };
+    if (!d.nombre || !d.apellido || !d.email || !d.empresa) {
+      return error($("err-reg"), "Completá nombre, apellido, email y empresa.");
+    }
+    if (d.email.indexOf("@") < 1 || d.email.indexOf(".") < 0) {
+      return error($("err-reg"), "Revisá el email.");
+    }
+    if (d.pass.length < 8) {
+      return error($("err-reg"), "La contraseña necesita al menos 8 caracteres.");
+    }
+    var todos = leer(KEY, []);
+    if (todos.some(function (u) { return u.email === d.email; })) {
+      return error($("err-reg"), "Ese email ya tiene una cuenta. Probá ingresando.");
+    }
+    d.numero = PRIMER_NUMERO + todos.length;
+    d.desde = new Date().toISOString();
+    d.beneficios = [];
+    todos.push(d);
+    guardar(KEY, todos);
+    guardar(SESION, d.email);
+    mostrarPanel(d);
+  });
+
+  /* ---------- ingreso ---------- */
+  $("btn-login").addEventListener("click", function () {
+    limpiar($("err-log"));
+    var em = $("l-email").value.trim().toLowerCase();
+    var pw = $("l-pass").value;
+    var u = leer(KEY, []).filter(function (x) { return x.email === em && x.pass === pw; })[0];
+    if (!u) return error($("err-log"), "No encontramos esa combinación de email y contraseña.");
+    guardar(SESION, em);
+    mostrarPanel(u);
+  });
+
+  /* ---------- panel ---------- */
+  function mostrarPanel(u) {
+    $("v-auth").classList.add("hidden");
+    $("v-panel").classList.remove("hidden");
+    $("saludo").textContent = "Hola, " + u.nombre + ".";
+    $("p-nombre").textContent = u.nombre + " " + u.apellido;
+    $("p-org").textContent = u.cargo ? u.cargo + " · " + u.empresa : u.empresa;
+    $("p-num").textContent = "SUSU-MEMBER-" + u.numero;
+    var f = new Date(u.desde);
+    $("p-desde").textContent = "Miembro desde " +
+      f.toLocaleDateString("es-AR", { month: "long", year: "numeric" });
+    pintarBeneficios(u);
+    window.scrollTo(0, 0);
+  }
+
+  function pintarBeneficios(u) {
+    var cont = $("lista-beneficios");
+    cont.innerHTML = "";
+    (u.beneficios || []).forEach(function (c) {
+      var b = BENEFICIOS[c];
+      if (!b) return;
+      var d = document.createElement("div");
+      d.className = "mb-unlocked";
+      d.innerHTML = "<strong></strong><span></span>";
+      d.querySelector("strong").textContent = b.titulo;
+      d.querySelector("span").textContent = b.detalle;
+      cont.appendChild(d);
+    });
+  }
+
+  /* ---------- canje de código ---------- */
+  $("btn-codigo").addEventListener("click", function () {
+    var msg = $("msg-codigo");
+    msg.className = "mb-msg";
+    var code = $("codigo").value.trim().toUpperCase();
+    var em = leer(SESION, null);
+    var todos = leer(KEY, []);
+    var i = todos.findIndex(function (x) { return x.email === em; });
+    if (i < 0) return;
+    if (!BENEFICIOS[code]) {
+      msg.textContent = "Ese código no es válido. Revisá que esté bien escrito.";
+      msg.className = "mb-msg bad on";
+      return;
+    }
+    if (todos[i].beneficios.indexOf(code) >= 0) {
+      msg.textContent = "Ese beneficio ya está activo en tu cuenta.";
+      msg.className = "mb-msg bad on";
+      return;
+    }
+    todos[i].beneficios.push(code);
+    guardar(KEY, todos);
+    $("codigo").value = "";
+    msg.textContent = "Listo, beneficio activado.";
+    msg.className = "mb-msg ok on";
+    pintarBeneficios(todos[i]);
+  });
+
+  /* ---------- salir ---------- */
+  $("btn-salir").addEventListener("click", function () {
+    localStorage.removeItem(SESION);
+    location.reload();
+  });
+
+  /* ---------- sesión guardada ---------- */
+  var em = leer(SESION, null);
+  if (em) {
+    var u = leer(KEY, []).filter(function (x) { return x.email === em; })[0];
+    if (u) mostrarPanel(u);
+  }
+})();
+</script>
+</body></html>
