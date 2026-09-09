@@ -1,99 +1,41 @@
-SUSU LATAM — Área de miembros (PROTOTIPO)
-=========================================
+SUSU LATAM — Página de eventos actualizada
+==========================================
 
-DÓNDE QUEDA
-  es/miembros/index.html   →   susulatam.com/es/miembros/
+ARCHIVOS (solo tres, uno por idioma)
+  es/eventos/index.html
+  en/events/index.html
+  pt/eventos/index.html
 
-Lleva noindex y la franja de prototipo. No está enlazada desde ningún menú.
-Se sube copiando la carpeta es/ sobre la del repo.
-
-
-LO PRIMERO Y MÁS IMPORTANTE
----------------------------
-ESTO ES UN PROTOTIPO, NO UN SISTEMA REAL.
-
-Tu sitio está en GitHub Pages, que es alojamiento estático: no hay servidor
-ni base de datos. Eso implica dos cosas:
-
-1. La contraseña NO protege nada de verdad. Todo el código corre en el
-   navegador del visitante y cualquiera puede leerlo.
-
-2. Los datos del registro NO te llegan. Se guardan solo en el navegador de
-   esa persona. Si abre desde otro dispositivo, no existe su cuenta.
-
-Sirve para evaluar la experiencia y mostrársela a alguien. No para publicarlo
-y empezar a pedir datos reales.
+Copiá las carpetas es/ en/ pt/ sobre las del repo. Solo se pisan esos tres
+archivos; el resto del sitio queda intacto.
 
 
-QUÉ HACE FALTA PARA QUE SEA REAL
---------------------------------
-Un servicio que guarde los datos y maneje las cuentas. La opción más simple
-para tu caso es Supabase: tiene plan gratuito generoso, hace autenticación de
-verdad (con recuperación de contraseña incluida) y base de datos.
-
-El trabajo sería:
-  1. Crear un proyecto en Supabase (15 minutos, gratis).
-  2. Crear la tabla de miembros.
-  3. Reemplazar en esta página las funciones de guardado por llamadas a
-     Supabase. Es media hora de trabajo.
-
-El diseño y todos los textos quedan igual. Avisame cuando quieras y lo hago.
-
-Alternativa intermedia sin backend: dejar solo el formulario de registro
-(sin login) enviando a un Google Form o a Formspree. Vos recibís los datos y
-mandás la credencial por mail a mano. Menos elegante, pero funciona hoy.
+QUÉ CAMBIÓ
+- SUSU Conversations #2 pasa a ser el próximo encuentro:
+    Ciudad de Buenos Aires
+    Miércoles 7 de octubre de 2026
+    No más de 15 personas
+- Se sacó la referencia a noviembre y a "fecha a confirmar".
+- El texto ahora dice que se suman industrias que no estuvieron en el primer
+  encuentro, para que la sustentabilidad siga ganando terreno en la región.
+- Se mantiene la tarjeta del SUSU Summit 2027.
+- Se actualizaron los datos estructurados de schema.org con la nueva fecha,
+  para que Google lo muestre como evento con día y lugar correctos.
 
 
-NÚMEROS DE SOCIO
-----------------
-Arrancan en 1050 y suben de a uno. Dejé libre el rango 1000-1007, que es el
-de las credenciales que ya imprimiste para el primer encuentro.
+LO QUE NO PUSE, Y POR QUÉ
+No nombré la Reserva Ecológica ni ninguna sede concreta: solo dice "Ciudad
+de Buenos Aires", como pediste.
 
-Una aclaración: que el primer socio sea el 1050 es una convención habitual,
-como pasa con los números de factura. Pero cuidado con leerlo como si fueran
-1050 miembros: si en algún momento decís esa cifra en público, sería falso.
-
-
-CÓDIGOS DE PRUEBA
------------------
-  SUSU-CONV1      Founding Member del primer encuentro
-  SUSU-FUNDADOR   Miembro fundador
-  SUSU-ALIADO     Organización aliada
-
-Cualquier otro devuelve error. Los códigos y sus beneficios se editan en el
-bloque BENEFICIOS, arriba del script.
+Es lo correcto por ahora. Hasta que no tengas la autorización formal por
+escrito, publicar la sede en la web te expone: si el permiso se demora o
+cambia el espacio, ya lo anunciaste. Cuando esté confirmado, es cambiar una
+línea y te lo actualizo en cinco minutos.
 
 
-QUÉ VE UN MIEMBRO AL ENTRAR
----------------------------
-- Su credencial digital con nombre, empresa, número y fecha de alta.
-- Ediciones anteriores (enlaza a la página que ya existe).
-- Directorio de miembros — marcado como próximamente.
-- Proponer un invitado.
-- Prioridad de inscripción — próximamente.
-- SUSU Impact.
-- Biblioteca — próximamente.
-- El canje de códigos, con los beneficios que va activando.
-
-Dejé cuatro cosas como "próximamente" a propósito: es mejor mostrar hacia
-dónde va que llenarlo de secciones vacías.
-
-
-LA FUNCIÓN QUE MÁS VALOR TIENE
-------------------------------
-El directorio de miembros. Que alguien de Carrefour pueda encontrar a alguien
-de Movistar dentro de la comunidad es lo único que un miembro no consigue por
-su cuenta, y es la razón real para volver a entrar.
-
-Dos condiciones para que funcione: que cada uno elija si quiere aparecer y con
-qué datos, y que no se publique ningún contacto sin autorización explícita.
-Sin eso, en vez de una comunidad tenés una base de datos filtrada.
-
-
-ANTES DE PUBLICARLO
--------------------
-- Borrar el recuadro verde de nota interna que está al final del panel.
-- Borrar la franja de prototipo de arriba.
-- Resolver el backend (ver más arriba).
-- Y si vas a guardar celulares y datos de contacto, conviene una línea sobre
-  qué hacés con esos datos. Es lo mínimo, y da confianza.
+VERIFICACIONES HECHAS
+- HTML balanceado en los tres archivos.
+- Todos los links del menú y del pie resuelven contra la estructura real
+  del repositorio.
+- El JSON-LD de schema.org es válido.
+- El 7 de octubre de 2026 cae miércoles.
