@@ -1,41 +1,22 @@
-SUSU LATAM — Página de eventos actualizada
-==========================================
+SUSU LATAM — Eventos actualizados
+=================================
 
-ARCHIVOS (solo tres, uno por idioma)
-  es/eventos/index.html
-  en/events/index.html
-  pt/eventos/index.html
+ARCHIVOS (tres, uno por idioma)
+  es/eventos/index.html · en/events/index.html · pt/eventos/index.html
+Copiá las carpetas es/ en/ pt/ sobre las del repo. Solo se pisan esos tres.
 
-Copiá las carpetas es/ en/ pt/ sobre las del repo. Solo se pisan esos tres
-archivos; el resto del sitio queda intacto.
+QUÉ QUEDÓ PUBLICADO
+  SUSU Conversations #2 · miércoles 7 de octubre · CABA · 9 a 12 h
+  SUSU Conversations #3 · miércoles 4 de noviembre · CABA · 9 a 12 h   (nuevo)
+  SUSU Sessions #1 · miércoles 11 de noviembre · Núñez, CABA · 18:30 a 21 h   (nuevo)
+      con "Es un evento especial. Muy pronto vamos a contar más."
+  SUSU Summit · 2027 · en preparación
 
+Los datos estructurados de schema.org ahora incluyen los tres eventos, así
+Google puede mostrar cada uno con su fecha.
 
-QUÉ CAMBIÓ
-- SUSU Conversations #2 pasa a ser el próximo encuentro:
-    Ciudad de Buenos Aires
-    Miércoles 7 de octubre de 2026
-    No más de 15 personas
-- Se sacó la referencia a noviembre y a "fecha a confirmar".
-- El texto ahora dice que se suman industrias que no estuvieron en el primer
-  encuentro, para que la sustentabilidad siga ganando terreno en la región.
-- Se mantiene la tarjeta del SUSU Summit 2027.
-- Se actualizaron los datos estructurados de schema.org con la nueva fecha,
-  para que Google lo muestre como evento con día y lugar correctos.
+NO SE NOMBRA la sede del 7/10 ni a ningún socio del 11/11, a propósito.
 
-
-LO QUE NO PUSE, Y POR QUÉ
-No nombré la Reserva Ecológica ni ninguna sede concreta: solo dice "Ciudad
-de Buenos Aires", como pediste.
-
-Es lo correcto por ahora. Hasta que no tengas la autorización formal por
-escrito, publicar la sede en la web te expone: si el permiso se demora o
-cambia el espacio, ya lo anunciaste. Cuando esté confirmado, es cambiar una
-línea y te lo actualizo en cinco minutos.
-
-
-VERIFICACIONES HECHAS
-- HTML balanceado en los tres archivos.
-- Todos los links del menú y del pie resuelven contra la estructura real
-  del repositorio.
-- El JSON-LD de schema.org es válido.
-- El 7 de octubre de 2026 cae miércoles.
+PENDIENTE (otras páginas)
+En "Formatos" y "Qué es SUSU", Sessions sigue figurando "En preparación".
+Ahora que hay fecha, conviene pasarlo a "Primera edición: 11 de noviembre".
