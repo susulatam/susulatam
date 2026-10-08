@@ -1,22 +1,27 @@
-SUSU LATAM — Eventos actualizados
-=================================
+SUSU LATAM — Web actualizada tras SUSU Conversations #2
+========================================================
 
-ARCHIVOS (tres, uno por idioma)
-  es/eventos/index.html · en/events/index.html · pt/eventos/index.html
-Copiá las carpetas es/ en/ pt/ sobre las del repo. Solo se pisan esos tres.
+QUÉ SUBIR AL REPO
+  assets/fotos/conv2/   carpeta NUEVA con las 5 fotos del segundo encuentro
+  es/ en/ pt/           seis páginas: eventos y ediciones anteriores en los tres idiomas
+No toca style.css, index.html, ni las fotos del primer encuentro (siguen donde estaban).
 
-QUÉ QUEDÓ PUBLICADO
-  SUSU Conversations #2 · miércoles 7 de octubre · CABA · 9 a 12 h
-  SUSU Conversations #3 · miércoles 4 de noviembre · CABA · 9 a 12 h   (nuevo)
-  SUSU Sessions #1 · miércoles 11 de noviembre · Núñez, CABA · 18:30 a 21 h   (nuevo)
-      con "Es un evento especial. Muy pronto vamos a contar más."
-  SUSU Summit · 2027 · en preparación
+EVENTOS
+- Se saca SUSU Conversations #2 (ya pasó).
+- SUSU Conversations #3 queda como próximo encuentro: miércoles 4 de noviembre, 9 a 12 h.
+- SUSU Sessions #1 · Tercer Tiempo: jueves 12 de noviembre, 18:30 a 21 h,
+  dentro de la agenda oficial de Climate Week Argentina.
+- Se mantiene el Summit 2027.
 
-Los datos estructurados de schema.org ahora incluyen los tres eventos, así
-Google puede mostrar cada uno con su fecha.
+EDICIONES ANTERIORES
+- La página ahora muestra las dos ediciones, la más reciente primero.
+- #2: Reserva Ecológica Costanera Sur, 7 de octubre, 11 personas, 8 industrias,
+  cuatro fotos con el mismo formato que el #1 (miniaturas que se agrandan al
+  hacer clic, se cierran con la X o con Escape) y la lista de participantes.
+- La foto grupal es horizontal: la miniatura muestra al grupo completo con
+  fondo difuminado, y al hacer clic se abre la foto original entera.
+- #1: igual que antes.
 
-NO SE NOMBRA la sede del 7/10 ni a ningún socio del 11/11, a propósito.
-
-PENDIENTE (otras páginas)
-En "Formatos" y "Qué es SUSU", Sessions sigue figurando "En preparación".
-Ahora que hay fecha, conviene pasarlo a "Primera edición: 11 de noviembre".
+LISTA DEL #2
+- Diez invitados con su organización, incluida Victoria Martínez (Reserva
+  Ecológica Costanera Sur). El anfitrión no figura, igual que en el #1.
