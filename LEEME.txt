@@ -1,28 +1,21 @@
-SUSU LATAM — Web actualizada tras SUSU Conversations #2
-========================================================
+SUSU LATAM — Landing del after (oculta) + eventos
+=================================================
 
 QUÉ SUBIR AL REPO
-  assets/fotos/conv2/   carpeta NUEVA con las 5 fotos del segundo encuentro
-  es/ en/ pt/           seis páginas: eventos y ediciones anteriores en los tres idiomas
-No toca style.css, index.html, ni las fotos del primer encuentro (siguen donde estaban).
+  cwa/index.html, en/cwa/index.html, pt/cwa/index.html   la landing
+  assets/og-cwa.jpg                                      imagen de vista previa
+  es/eventos, en/events, pt/eventos                      eventos actualizados
 
-EVENTOS
-- Se saca SUSU Conversations #2 (ya pasó).
-- SUSU Conversations #3 queda como próximo encuentro: miércoles 4 de noviembre, 9 a 12 h.
-- SUSU Sessions #1 · Tercer Tiempo: jueves 12 de noviembre, 18:30 a 21 h,
-  dentro de la agenda oficial de Climate Week Argentina.
-- Se mantiene el Summit 2027.
+CAMBIOS
+- Landing: se sacó "Diez minutos, una pregunta". Queda "Cero descartables".
+- Landing oculta: ninguna página del sitio enlaza a /cwa, y la landing lleva
+  la indicación para que los buscadores no la indexen.
+- La tarjeta del 12/11 en Eventos ahora lleva a la inscripción en Luma.
 
-EDICIONES ANTERIORES
-- La página ahora muestra las dos ediciones, la más reciente primero.
-- #2: Reserva Ecológica Costanera Sur, 7 de octubre, 11 personas, 8 industrias,
-  cuatro fotos con el mismo formato que el #1 (miniaturas que se agrandan al
-  hacer clic, se cierran con la X o con Escape) y la lista de participantes.
-- La foto grupal es horizontal: la miniatura muestra al grupo completo con
-  fondo difuminado, y al hacer clic se abre la foto original entera.
-- #1: igual que antes.
+IMPORTANTE
+"Oculta" no es "privada": quien tenga el link puede entrar. Si necesitás que
+solo accedan personas autorizadas, se puede proteger con Cloudflare Access.
 
-QUIÉNES ESTUVIERON
-- #2: once personas con su organización, incluida Victoria Martínez (Reserva).
-- #1: las ocho personas con su organización.
-- En las dos ediciones figura también el anfitrión.
+CUANDO TERMINE EL EVENTO
+Se borran las carpetas cwa/, en/cwa/ y pt/cwa/ y el contenido pasa a
+Ediciones anteriores.
